@@ -44,17 +44,17 @@
   #error-banner{
     position:absolute;top:0;left:0;right:0;z-index:9999;
     background:#7a1a1a;color:#fff;font-size:11px;font-family:monospace;
-    padding:8px 10px;display:none;max-height:30%;overflow:auto;white-space:pre-wrap;
+    padding:calc(8px + env(safe-area-inset-top)) 10px 8px 10px;display:none;max-height:30%;overflow:auto;white-space:pre-wrap;
   }
-  #error-banner button{position:absolute;top:4px;right:6px;background:none;border:none;color:#fff;font-size:14px;}
+  #error-banner button{position:absolute;top:calc(4px + env(safe-area-inset-top));right:6px;background:none;border:none;color:#fff;font-size:14px;}
 
   /* ---------- HUD-Banner ---------- */
   .hud-banner{
     position:absolute;top:0;left:0;right:0;z-index:500;
-    padding:14px 16px 26px 16px;
+    padding:calc(14px + env(safe-area-inset-top)) 16px 16px 16px;
     background:linear-gradient(180deg,var(--parchment) 0%,var(--parchment-dark) 100%);
     box-shadow:0 4px 10px rgba(0,0,0,.35);
-    clip-path:polygon(0 0,100% 0,100% 84%,96% 100%,92% 82%,88% 100%,84% 82%,80% 100%,76% 82%,72% 100%,68% 82%,64% 100%,60% 82%,56% 100%,52% 82%,48% 100%,44% 82%,40% 100%,36% 82%,32% 100%,28% 82%,24% 100%,20% 82%,16% 100%,12% 82%,8% 100%,4% 82%,0 100%);
+    clip-path:polygon(0 0,100% 0,100.0% 100%,97.73% 95%,95.45% 100%,93.18% 95%,90.91% 100%,88.64% 95%,86.36% 100%,84.09% 95%,81.82% 100%,79.55% 95%,77.27% 100%,75.0% 95%,72.73% 100%,70.45% 95%,68.18% 100%,65.91% 95%,63.64% 100%,61.36% 95%,59.09% 100%,56.82% 95%,54.55% 100%,52.27% 95%,50.0% 100%,47.73% 95%,45.45% 100%,43.18% 95%,40.91% 100%,38.64% 95%,36.36% 100%,34.09% 95%,31.82% 100%,29.55% 95%,27.27% 100%,25.0% 95%,22.73% 100%,20.45% 95%,18.18% 100%,15.91% 95%,13.64% 100%,11.36% 95%,9.09% 100%,6.82% 95%,4.55% 100%,2.27% 95%,0.0% 100%);
   }
   .hud-top{display:flex;align-items:center;gap:12px;}
   .avatar-badge{
@@ -80,7 +80,7 @@
   .quest-modal-text{font-size:13.5px;color:var(--ink);line-height:1.5;margin-bottom:16px;white-space:pre-wrap;}
 
   /* ---------- Toasts ---------- */
-  #toast-container{position:absolute;top:98px;left:0;right:0;z-index:600;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;}
+  #toast-container{position:absolute;top:calc(94px + env(safe-area-inset-top));left:0;right:0;z-index:600;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;}
   .toast{
     background:var(--ember);color:var(--cream);font-family:'Baloo 2',sans-serif;font-weight:700;
     padding:9px 18px;border-radius:999px;border:2px solid var(--gold);
@@ -97,21 +97,23 @@
     font-size:22px;display:flex;align-items:center;justify-content:center;
     box-shadow:0 4px 10px rgba(0,0,0,.4);cursor:pointer;
   }
-  #quest-btn{bottom:22px;right:16px;}
-  #locate-btn{bottom:22px;right:82px;background:var(--forest);}
+  #quest-btn{bottom:calc(22px + env(safe-area-inset-bottom));right:16px;}
+  #locate-btn{bottom:calc(22px + env(safe-area-inset-bottom));right:82px;background:var(--forest);}
 
   /* ---------- Quest-Scroll ---------- */
   #quest-panel{
     position:absolute;left:0;right:0;bottom:0;z-index:550;
     max-height:72%;transform:translateY(100%);transition:transform .35s ease;
     background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
-    padding:26px 18px 18px 18px;
+    padding:16px 18px calc(18px + env(safe-area-inset-bottom)) 18px;
     box-shadow:0 -6px 16px rgba(0,0,0,.4);
     display:flex;flex-direction:column;
-    clip-path:polygon(0 6%,4% 0,8% 8%,12% 0,16% 8%,20% 0,24% 8%,28% 0,32% 8%,36% 0,40% 8%,44% 0,48% 8%,52% 0,56% 8%,60% 0,64% 8%,68% 0,72% 8%,76% 0,80% 8%,84% 0,88% 8%,92% 0,96% 8%,100% 0,100% 100%,0 100%);
+    clip-path:polygon(0.0% 0%,2.27% 4%,4.55% 0%,6.82% 4%,9.09% 0%,11.36% 4%,13.64% 0%,15.91% 4%,18.18% 0%,20.45% 4%,22.73% 0%,25.0% 4%,27.27% 0%,29.55% 4%,31.82% 0%,34.09% 4%,36.36% 0%,38.64% 4%,40.91% 0%,43.18% 4%,45.45% 0%,47.73% 4%,50.0% 0%,52.27% 4%,54.55% 0%,56.82% 4%,59.09% 0%,61.36% 4%,63.64% 0%,65.91% 4%,68.18% 0%,70.45% 4%,72.73% 0%,75.0% 4%,77.27% 0%,79.55% 4%,81.82% 0%,84.09% 4%,86.36% 0%,88.64% 4%,90.91% 0%,93.18% 4%,95.45% 0%,97.73% 4%,100.0% 0%,100% 100%,0 100%);
   }
   #quest-panel.open{transform:translateY(0);}
-  #quest-panel h2{margin:0 0 10px 0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:19px;flex-shrink:0;}
+  #quest-panel .panel-header{display:flex;align-items:center;justify-content:space-between;margin-top:8px;margin-bottom:10px;flex-shrink:0;}
+  #quest-panel h2{margin:0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:19px;flex-shrink:0;}
+  .panel-close-btn{border:none;background:rgba(58,46,31,.2);color:var(--ink);width:30px;height:30px;border-radius:50%;font-size:15px;font-weight:800;flex-shrink:0;}
   #quest-panel .sub{margin:0 0 10px 0;font-size:12.5px;color:var(--ink);opacity:.75;}
   .tab-bar{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;flex-shrink:0;padding-bottom:2px;}
   .tab-btn{flex:0 0 auto;border:none;background:rgba(255,255,255,.35);color:var(--ink);font-family:'Baloo 2',sans-serif;font-weight:700;font-size:12px;padding:8px 12px;border-radius:10px;}
@@ -194,15 +196,16 @@
   .mini-btn.primary{background:var(--forest);color:var(--cream);}
 
   /* ---------- Eltern-Bereich ---------- */
-  #parent-btn{position:absolute;top:10px;right:10px;z-index:520;width:30px;height:30px;border-radius:50%;background:rgba(58,46,31,.55);border:none;color:var(--cream);font-size:13px;}
+  #parent-btn{position:absolute;top:calc(10px + env(safe-area-inset-top));right:10px;z-index:520;width:40px;height:40px;border-radius:50%;background:rgba(58,46,31,.55);border:none;color:var(--cream);font-size:16px;}
   #parent-panel{
     position:absolute;left:0;right:0;bottom:0;z-index:700;max-height:74%;
     transform:translateY(100%);transition:transform .35s ease;
     background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
-    padding:22px 18px 18px 18px;box-shadow:0 -6px 16px rgba(0,0,0,.4);
+    padding:16px 18px calc(18px + env(safe-area-inset-bottom)) 18px;box-shadow:0 -6px 16px rgba(0,0,0,.4);
     display:flex;flex-direction:column;
   }
   #parent-panel.open{transform:translateY(0);}
+  #parent-panel .panel-header{display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
   #parent-panel h2{margin:0 0 10px 0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:18px;}
   .pin-dots{display:flex;gap:14px;justify-content:center;margin:18px 0;}
   .pin-dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink);background:transparent;}
@@ -215,7 +218,7 @@
   .offline-slider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);border:2px solid var(--forest);cursor:pointer;}
 
   /* ---------- Schatz-Kompass ---------- */
-  #treasure-compass{position:absolute;top:104px;left:14px;z-index:500;display:none;flex-direction:column;align-items:center;gap:4px;}
+  #treasure-compass{position:absolute;top:calc(100px + env(safe-area-inset-top));left:14px;z-index:500;display:none;flex-direction:column;align-items:center;gap:4px;}
   #treasure-compass .tc-circle{width:52px;height:52px;border-radius:50%;background:rgba(58,46,31,.72);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,0,0,.4);}
   #treasure-compass-arrow{font-size:24px;font-weight:800;color:var(--gold);display:inline-block;transition:transform .3s ease;}
   #treasure-compass-dist{font-size:10px;font-weight:800;color:var(--cream);background:rgba(58,46,31,.72);padding:2px 8px;border-radius:999px;}
@@ -257,7 +260,10 @@
 <button id="quest-btn" class="round-btn" title="Quests öffnen">📜</button>
 
 <div id="quest-panel">
-  <h2>Entdecker-Logbuch</h2>
+  <div class="panel-header">
+    <h2>Entdecker-Logbuch</h2>
+    <button class="panel-close-btn" id="quest-panel-close-btn" title="Schließen">✕</button>
+  </div>
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="biome">🌍 Biome</button>
     <button class="tab-btn" data-tab="schaetze">💎 Schätze</button>
@@ -311,21 +317,27 @@
     </div>
   </div>
   <div class="panel-footer">
-    <span class="test-hint">🧪 Testmodus: Karte antippen simuliert Bewegung.</span>
+    <span class="test-hint" id="testmode-hint">🧪 Testmodus: Karte antippen simuliert Bewegung.</span>
     <button class="reset-btn" id="reset-btn">Zurücksetzen</button>
   </div>
 </div>
 
 <div id="parent-panel">
   <div id="parent-pin-view">
-    <h2>🔒 Eltern-Bereich</h2>
+    <div class="panel-header">
+      <h2>🔒 Eltern-Bereich</h2>
+      <button class="panel-close-btn" id="parent-pin-close-btn" title="Schließen">✕</button>
+    </div>
     <p class="sub" id="pin-instruction">PIN eingeben</p>
     <div class="pin-dots" id="pin-dots"></div>
     <div class="pin-pad" id="pin-pad"></div>
     <button class="reset-btn" id="parent-cancel-btn">Abbrechen</button>
   </div>
   <div id="parent-unlocked-view" style="display:none;">
-    <h2>🔒 Eltern-Bereich</h2>
+    <div class="panel-header">
+      <h2>🔒 Eltern-Bereich</h2>
+      <button class="panel-close-btn" id="parent-unlocked-close-btn" title="Schließen">✕</button>
+    </div>
     <div class="tab-scroll">
       <p class="sub">Gegenstand wählen, dann auf die Karte tippen, um ihn dort zu verstecken. Der Nebel ist hier ausgeblendet, damit du die Karte siehst.</p>
       <label class="symmetry-toggle" style="margin-bottom:10px;"><input type="checkbox" id="compass-toggle"> 🧭 Schatz-Kompass fürs Kind aktivieren</label>
@@ -378,9 +390,13 @@
         <div id="offline-progress-text" style="font-size:11px;margin-top:4px;color:var(--ink);"></div>
       </div>
       <p class="sub" id="offline-status-line" style="margin-top:6px;"></p>
+
+      <p class="sub" style="margin-top:16px;border-top:1px solid var(--parchment-deep);padding-top:12px;">⚙️ Sonstiges:</p>
+      <label class="symmetry-toggle" style="margin-bottom:6px;"><input type="checkbox" id="testmode-toggle" checked> 🧪 Testmodus (Karte antippen simuliert Bewegung)</label>
+      <p class="sub" style="margin-top:0;font-size:11px;">Ausschalten, damit die Karte sich nur durch echtes Herumlaufen aufdeckt.</p>
+      <button class="reset-btn" id="parent-change-pin-btn">PIN ändern</button>
     </div>
     <div class="panel-footer">
-      <button class="reset-btn" id="parent-change-pin-btn">PIN ändern</button>
       <button class="reset-btn" id="parent-close-btn">Fertig</button>
     </div>
   </div>
@@ -639,6 +655,7 @@
     s.quests = s.quests || [];
     s.questProgress = s.questProgress || {};
     s.activeQuestId = s.activeQuestId || null;
+    s.testModeEnabled = s.testModeEnabled === undefined ? true : s.testModeEnabled;
     s.treasureCompassEnabled = s.treasureCompassEnabled || false;
     s.speciesFound = s.speciesFound || {};
     PHOTO_COLLECTIONS.forEach(function(c){
@@ -902,6 +919,7 @@
   var questPanel = document.getElementById('quest-panel');
   var questList = document.getElementById('quest-list');
   document.getElementById('quest-btn').addEventListener('click', function(){ questPanel.classList.toggle('open'); });
+  document.getElementById('quest-panel-close-btn').addEventListener('click', function(){ questPanel.classList.remove('open'); });
 
   function renderQuestList(){
     questList.innerHTML = '';
@@ -2072,6 +2090,7 @@
     renderPlacedItemsList();
     showItemMarkersOnMap();
     document.getElementById('compass-toggle').checked = !!state.treasureCompassEnabled;
+    document.getElementById('testmode-toggle').checked = state.testModeEnabled !== false;
     document.getElementById('offline-radius-slider').value = state.offlineArea.radiusKm;
     document.getElementById('offline-radius-value').textContent = state.offlineArea.radiusKm;
     document.getElementById('offline-center-status').textContent = state.offlineArea.center ? 'Zentrum gesetzt ✓' : '';
@@ -2103,6 +2122,8 @@
   });
   document.getElementById('parent-cancel-btn').addEventListener('click', closeParentPanel);
   document.getElementById('parent-close-btn').addEventListener('click', closeParentPanel);
+  document.getElementById('parent-pin-close-btn').addEventListener('click', closeParentPanel);
+  document.getElementById('parent-unlocked-close-btn').addEventListener('click', closeParentPanel);
   document.getElementById('parent-change-pin-btn').addEventListener('click', function(){
     state.parentPin = null; saveState();
     pinMode = 'setup'; pinEntry = '';
@@ -2133,6 +2154,19 @@
     saveState();
     var p = playerMarker.getLatLng();
     updateTreasureCompass(p.lat, p.lng);
+  });
+  function updateTestModeHint(){
+    var el = document.getElementById('testmode-hint');
+    if(!el) return;
+    el.textContent = state.testModeEnabled
+      ? '🧪 Testmodus: Karte antippen simuliert Bewegung.'
+      : '📍 Nur echtes Laufen deckt die Karte auf.';
+  }
+  document.getElementById('testmode-toggle').addEventListener('change', function(e){
+    state.testModeEnabled = e.target.checked;
+    saveState();
+    updateTestModeHint();
+    showToast(state.testModeEnabled ? '🧪 Testmodus an' : '📍 Nur noch echtes Laufen zählt');
   });
 
   // ---------- Bewegung verarbeiten ----------
@@ -2198,7 +2232,7 @@
       showToast('🎁 Quest-Gegenstand platziert!');
     } else if(parentPlacementMode === 'offline-center'){ setOfflineCenter(e.latlng.lat, e.latlng.lng); }
     else if(parentPlacementMode){ placeItemAt(e.latlng.lat, e.latlng.lng); }
-    else { handleNewPosition(e.latlng.lat, e.latlng.lng); }
+    else if(state.testModeEnabled){ handleNewPosition(e.latlng.lat, e.latlng.lng); }
   });
 
   document.getElementById('locate-btn').addEventListener('click', function(){
@@ -2248,6 +2282,7 @@
   renderInventory();
   buildPinPad();
   updateQuestIndicator();
+  updateTestModeHint();
   initGeolocation();
 })();
 </script>

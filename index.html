@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Entdecker-Quest</title>
+
+<!-- iOS: "Zum Home-Bildschirm" Unterstützung -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Entdecker">
+<meta name="theme-color" content="#2D4A34">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAHyUlEQVR4nO3dO5IcVRCF4SMCBw+DDeBrAWDIwmMHMggMloGtZWAQGNqBNiBDLEC+NoAhD1MY4obudFd13fc9mXl+B0KhR1X3VznZNT0zgFJKKaWUUqqmZ7sPwEPvX7/4NOrvev7yrZ6TjvTgVTQSbm2CXpYepJN24i1NyO/TA/J/FgBfJeDBQXtAfFZU3OFO2jPisyLhDnOiESHfFgG26xMU4vO84nZ5Ujsgv/zr3+6/4/Uv3ww4krq8wXZ1MrMhj0Db2mzsXmC7OIlZkHcCvmoWcOuwTR88MBYzM+CrRgK3jNrsgY+CbBnxWaNwW4Rt7oAFubyIsM0cKNCPOQLis3pxW0Ft4iAFeVzeYVMfHNCHWZDP64HNjJr2wIB2zIJcXitsVtSUByXI6/MCm+pggDbMgjyuFthMqL/afQB5wry/lseT6U1gNFdW7YMiyPOrndYMk5piQgszZ7WPM8Ok3npFacWwkaW9ehvoaFP51cfv8Pu3/+w+jK4srCBbVo5omL1kYQVZDjoi5lcfv3vyX8uxo14KOiJmjzGj/nrVP1STJ8gepvJR6Tna8XWQj1o2oUuvUk+Yj/IGvPT5WjWll4AWZt8xoZ4OOjJmb9P4USyop4KOjPlRXqEzoJ4GWphjths1xXs5PHY1hb1O6d1NAa3pHLudU3o4aGHW9AX2oR4KWpjr8g5/B+rlO7Qwx2r18z0MNMObuxnyPnVnNcrPENBaNdqLcAGsXD2WrRzCHLtVz3836JKrKgrmCNO2pxIHvVNan1ghSBfCuLpAazp/SSjLmj2lm0ELs2ptJmqtHCRpwo+pCbSm89OEsb5ZU1oTmihdGP1Vg9Z0VqOaMaU1oTvTVOWqCrSm8/yiXSCjp7QmdEfR8FloKGhNZ9XSSDfFoPX20HVp8t9X6m/YhI42nYVubKP8FIHWdFYMlTjUi0LS9BGgrSGgtW6oEY1wdAla64Zi6spj94TWdPbxb7HU60k7tHLVQ9BaN/YXcUpf9chl14TWuqFm1ONKK4dylUAbSB8ZyjsFrf35aULF1ZnP5gkdbX9Wa2v1pZWjIIbpzHAMFhJo5SrKnyTL0N9//rH7EO76Kfv/H379bdtxMPfs6BevXhB63p8ZIT/KO+yrH738/OXbJ4Y1oWEPcV5+7N5xlxQWtGXEZwl3QNAeIR+VzjMa7BCgoyA+KtrUdgs6MuKzIuC+u8th/bsjMUH+/sefD3/9w7s3i4/kPHbYV3c5gKd3OqpBM2JmQgycQ76NCTbAi7vm1p3plYMNMlCOOf1eJtQeXkiaA82IOFWDOf8zTKgB27u2CdDMiFMtmPM/y4Y6ZQ03NWgLkCNlYSWhA20Rcc90zv8O1il9G/PUpgBtEbH6HBvuraAF2VcMK8ly0ELsv51Tezno/ASF22ehJnSecPuJYX8GSF4UAl8eEIuwP7x7032nw8odjttYIKdoQKc0tfljQ5xHBzrPEu6eKW1hOjMjzqMGnWcBdwtqZsxWEOeZAZ3HjLsGNSNmi4jzTILOY8SdoFp4gz9gH3Geu69YAXhgs2cBcvdXrAA2v2rlLOF+mgXEefpGMzcxriSrs4a4J/eg8yLhjoQ4LxToPI+4oyLOCws6z/Kn3QFBzhPoLEtTW4iPO7zLAfi609EbC+5oiGvvcAD6Dv7KWQJdEMNkZDgGCwm0clUz6JJPSXpKE3Jtrb5OQR8t3GpPupjuO/OplUO5SqAr0qTkrwt0tD16RxEvoh5XD0Frj1aMPXKplaOylRMz4nTurRu01g41sl5Pl6C1dtynybmvK49DVg5N6fFFvGhGONIOrVxVBFprx30RJ+juShwOm9BaO8YV8WIZ5acYtKa02lmpv6E7dLQpHXGSzmikG70oJEsXSV9VoEvGvqa0qqn2W31dpQmtXFUNWlN6XtGm/ejpDGhCDykaROaaQGtKjy/aRTFjOgOa0MpZzaA1pZ8WbcL2NGs6A50TWqjHFOlimIkZ0MoxtEgwWesGrSmtSps9nYGFE1qoj4sy1Vc9/0NAl15VEVBHAVpT6fM+4h2dwya03l6qehrlZ/mLwghTurQI03z18z0UtFaPz0WAWtLKVSM1fEILtQL2YAYmrRxCfT2lPU/xXZgBfWJFOWsaaE3p8zSd590Vmzqho6P2DPeo3ZiBBStHdNRRYsAMLNqhhfpLHqc2C2Zg4YvCqKg9As5jwgyQ/qzv9CBF+vHL1mIdPEtv29VepawPWm1pSnuZ1rXPy8r3+Sy/Dx0VtZeYMQPAtnfIvX/94lPN79f6sT92zMBG0EA9akCwd9TyUXLX24kp3sOsac2bhamcR/FeDu3VnFnDDJBM6JRWEI4srRi3UUzoVMuDomk9NsuYAbIJnWqZ1ICmdU+tg4EJM0AKOiXY8/MCOUV5UHmtqAHBflTPqsaKGTAAGuhDDQh2Xu9rDmbMgBHQKcFuzzvklImDzOtFnYqAe9QdICuYAYOgU4J9XkTIKXMHfNso2IBt3CPvx1uEnDJ74HkjUecxA5/1CSXLmAEnoFOzYKd2Ap/9GVHrkFMuTuK22bCPGoF9x6fxvUBOuTqZ23bAtpI3yCmXJ3WUcPtFnOf+BG+LCDsC5FSYEz3KM+5IiPNCnvRRHnBHRZwX/gE4ywJwAb5PD0hFO5ELb1l6kAY0ErrgKqWUUkrR9x8y/slkRVrouwAAAABJRU5ErkJggg==">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --parchment:#E4D2A0;
+    --parchment-dark:#C9AD75;
+    --parchment-deep:#AD8A56;
+    --forest:#2D4A34;
+    --forest-deep:#16241B;
+    --ember:#B23A48;
+    --gold:#D4A73D;
+    --ink:#3A2E1F;
+    --cream:#F5EBD1;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;margin:0;overflow:hidden;font-family:'Nunito',sans-serif;background:var(--forest-deep);overscroll-behavior:none;}
+
+  /* #map bekommt einen eigenen, isolierten Stacking-Context, damit interne
+     Leaflet-Ebenen (Marker, Popups etc.) den Nebel niemals überdecken können */
+  #map{position:absolute;inset:0;background:#cfd8c8;z-index:1;isolation:isolate;}
+  #fog{position:absolute;inset:0;pointer-events:none;z-index:50;}
+
+  .leaflet-control-zoom{border:none !important;box-shadow:0 2px 6px rgba(0,0,0,.35) !important;}
+  .leaflet-control-zoom a{background:var(--parchment) !important;color:var(--ink) !important;border:1px solid var(--parchment-deep) !important;font-weight:800;}
+  .leaflet-control-attribution{background:rgba(228,210,160,.85) !important;color:var(--ink) !important;font-size:10px !important;border-radius:6px 0 0 0;}
+
+  /* ---------- Fehler-Banner (Diagnose-Hilfe) ---------- */
+  #error-banner{
+    position:absolute;top:0;left:0;right:0;z-index:9999;
+    background:#7a1a1a;color:#fff;font-size:11px;font-family:monospace;
+    padding:8px 10px;display:none;max-height:30%;overflow:auto;white-space:pre-wrap;
+  }
+  #error-banner button{position:absolute;top:4px;right:6px;background:none;border:none;color:#fff;font-size:14px;}
+
+  /* ---------- HUD-Banner ---------- */
+  .hud-banner{
+    position:absolute;top:0;left:0;right:0;z-index:500;
+    padding:14px 16px 26px 16px;
+    background:linear-gradient(180deg,var(--parchment) 0%,var(--parchment-dark) 100%);
+    box-shadow:0 4px 10px rgba(0,0,0,.35);
+    clip-path:polygon(0 0,100% 0,100% 84%,96% 100%,92% 82%,88% 100%,84% 82%,80% 100%,76% 82%,72% 100%,68% 82%,64% 100%,60% 82%,56% 100%,52% 82%,48% 100%,44% 82%,40% 100%,36% 82%,32% 100%,28% 82%,24% 100%,20% 82%,16% 100%,12% 82%,8% 100%,4% 82%,0 100%);
+  }
+  .hud-top{display:flex;align-items:center;gap:12px;}
+  .avatar-badge{
+    width:46px;height:46px;border-radius:50%;background:var(--forest);
+    display:flex;align-items:center;justify-content:center;font-size:24px;
+    border:3px solid var(--gold);flex-shrink:0;overflow:hidden;
+  }
+  .hud-titles{flex:1;min-width:0;}
+  .hud-title-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;}
+  .hud-title-row .name{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--ink);font-size:15px;}
+  .hud-title-row .lvl{font-family:'Baloo 2',sans-serif;font-weight:800;color:var(--ember);font-size:14px;}
+  .xp-track{margin-top:5px;height:8px;border-radius:5px;background:rgba(58,46,31,.25);overflow:hidden;border:1px solid var(--parchment-deep);}
+  .xp-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),#efc65a);transition:width .4s ease;}
+  .hud-stats{margin-top:2px;font-size:11px;color:var(--ink);opacity:.85;line-height:1.5;}
+  .hud-status{margin-top:2px;font-size:10.5px;color:var(--ember);font-weight:700;min-height:13px;}
+  #quest-indicator{margin-top:4px;font-size:10.5px;font-weight:700;color:var(--ink);background:rgba(212,167,61,.4);padding:3px 10px;border-radius:999px;display:inline-block;}
+
+  /* ---------- Quest-Nachricht ---------- */
+  .quest-modal-overlay{position:absolute;inset:0;z-index:900;background:rgba(22,36,27,.78);display:flex;align-items:center;justify-content:center;padding:24px;}
+  .quest-modal-box{background:linear-gradient(180deg,var(--parchment) 0%,var(--parchment-dark) 100%);border-radius:16px;padding:22px;max-width:320px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.5);border:3px solid var(--gold);}
+  .quest-modal-icon{font-size:36px;margin-bottom:8px;}
+  .quest-modal-title{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:17px;color:var(--ink);margin-bottom:8px;}
+  .quest-modal-text{font-size:13.5px;color:var(--ink);line-height:1.5;margin-bottom:16px;white-space:pre-wrap;}
+
+  /* ---------- Toasts ---------- */
+  #toast-container{position:absolute;top:98px;left:0;right:0;z-index:600;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;}
+  .toast{
+    background:var(--ember);color:var(--cream);font-family:'Baloo 2',sans-serif;font-weight:700;
+    padding:9px 18px;border-radius:999px;border:2px solid var(--gold);
+    box-shadow:0 4px 10px rgba(0,0,0,.4);
+    opacity:0;transform:translateY(-14px) scale(.9);transition:all .35s ease;
+    font-size:13px;white-space:nowrap;max-width:90vw;overflow:hidden;text-overflow:ellipsis;
+  }
+  .toast.show{opacity:1;transform:translateY(0) scale(1);}
+
+  /* ---------- Runde Aktionsbuttons ---------- */
+  .round-btn{
+    position:absolute;z-index:500;width:54px;height:54px;border-radius:50%;
+    background:var(--ember);border:3px solid var(--gold);color:var(--cream);
+    font-size:22px;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.4);cursor:pointer;
+  }
+  #quest-btn{bottom:22px;right:16px;}
+  #locate-btn{bottom:22px;right:82px;background:var(--forest);}
+
+  /* ---------- Quest-Scroll ---------- */
+  #quest-panel{
+    position:absolute;left:0;right:0;bottom:0;z-index:550;
+    max-height:72%;transform:translateY(100%);transition:transform .35s ease;
+    background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
+    padding:26px 18px 18px 18px;
+    box-shadow:0 -6px 16px rgba(0,0,0,.4);
+    display:flex;flex-direction:column;
+    clip-path:polygon(0 6%,4% 0,8% 8%,12% 0,16% 8%,20% 0,24% 8%,28% 0,32% 8%,36% 0,40% 8%,44% 0,48% 8%,52% 0,56% 8%,60% 0,64% 8%,68% 0,72% 8%,76% 0,80% 8%,84% 0,88% 8%,92% 0,96% 8%,100% 0,100% 100%,0 100%);
+  }
+  #quest-panel.open{transform:translateY(0);}
+  #quest-panel h2{margin:0 0 10px 0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:19px;flex-shrink:0;}
+  #quest-panel .sub{margin:0 0 10px 0;font-size:12.5px;color:var(--ink);opacity:.75;}
+  .tab-bar{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;flex-shrink:0;padding-bottom:2px;}
+  .tab-btn{flex:0 0 auto;border:none;background:rgba(255,255,255,.35);color:var(--ink);font-family:'Baloo 2',sans-serif;font-weight:700;font-size:12px;padding:8px 12px;border-radius:10px;}
+  .tab-btn.active{background:var(--forest);color:var(--cream);}
+  .tab-scroll{overflow-y:auto;flex:1;min-height:0;}
+  .tab-content{display:none;}
+  .tab-content.active{display:block;}
+
+  #quest-list,#treasure-list,#inventory-list,#placed-items-list,#quest-list-admin,#quest-waypoint-list,#quest-item-list{list-style:none;margin:0;padding:0;}
+  #quest-list li,#treasure-list li,#inventory-list li,#placed-items-list li,#quest-list-admin li,#quest-waypoint-list li,#quest-item-list li{
+    display:flex;align-items:center;gap:12px;padding:10px 8px;border-radius:12px;margin-bottom:6px;
+    background:rgba(255,255,255,.25);
+  }
+  #quest-list li.done,#quest-list-admin li.done{background:rgba(212,167,61,.35);}
+  .inv-category-header{background:none !important;padding:8px 4px 2px 4px !important;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:12.5px;color:var(--ink);opacity:.8;}
+  .item-picker-cat-label{font-size:10.5px;font-weight:800;color:var(--ink);opacity:.75;margin:8px 0 3px 0;}
+  .quest-input,.quest-textarea{
+    width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--parchment-deep);
+    font-family:'Nunito',sans-serif;font-size:13px;color:var(--ink);background:rgba(255,255,255,.55);
+    margin:4px 0 8px 0;resize:vertical;box-sizing:border-box;
+  }
+  .q-icon{font-size:24px;width:32px;text-align:center;flex-shrink:0;}
+  .q-info{flex:1;min-width:0;}
+  .q-info .q-name{font-family:'Baloo 2',sans-serif;font-weight:700;color:var(--ink);font-size:14.5px;}
+  .q-info .q-desc{font-size:11.5px;color:var(--ink);opacity:.75;}
+  .q-status{font-size:18px;flex-shrink:0;}
+
+  .stat-pill{display:inline-block;background:rgba(255,255,255,.35);color:var(--ink);font-weight:700;font-size:12px;padding:6px 12px;border-radius:999px;margin-bottom:10px;}
+
+  .daily-card{background:rgba(255,255,255,.3);border-radius:14px;padding:16px;text-align:center;margin-bottom:10px;}
+  .daily-card.done{background:rgba(212,167,61,.4);}
+
+  .photo-card{background:rgba(255,255,255,.25);border-radius:14px;padding:10px;margin-bottom:10px;}
+  .photo-card-head{display:flex;align-items:center;gap:10px;}
+  .photo-btn{width:38px;height:38px;border-radius:50%;border:2px solid var(--gold);background:var(--forest);color:var(--cream);font-size:16px;flex-shrink:0;}
+  .thumb-row{display:flex;gap:6px;margin-top:8px;overflow-x:auto;}
+  .thumb{width:44px;height:44px;object-fit:cover;border-radius:8px;border:2px solid var(--parchment-deep);flex-shrink:0;}
+  .bird-checklist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+  .bird-chip{font-size:10.5px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.4);padding:4px 8px;border-radius:999px;}
+  .bird-chip.done{background:rgba(212,167,61,.55);}
+
+  .panel-footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;flex-shrink:0;gap:10px;}
+  .test-hint{font-size:10px;color:var(--ink);opacity:.7;}
+  .reset-btn{border:none;background:transparent;color:var(--ember);font-size:11px;font-weight:800;text-decoration:underline;flex-shrink:0;}
+
+  .avatar-wrap{position:relative;width:70px;height:70px;}
+  .avatar-wrap .avatar-emoji{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:38px;height:38px;border-radius:50%;background:var(--forest);
+    border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    font-size:19px;box-shadow:0 2px 6px rgba(0,0,0,.5);overflow:hidden;
+  }
+  .heading-cone{
+    position:absolute;left:50%;top:50%;width:34px;height:34px;
+    transform-origin:50% 100%;
+    transform:translate(-50%,-100%) rotate(0deg);
+    clip-path:polygon(50% 100%, 8% 8%, 92% 8%);
+    background:linear-gradient(to top, rgba(212,167,61,.7), rgba(212,167,61,0));
+    opacity:0;transition:opacity .3s ease;pointer-events:none;
+  }
+
+  /* ---------- Charakter-Editor ---------- */
+  .char-editor{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;}
+  .checker-bg{background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0;background-color:#f2f2f2;}
+  .pixel-grid{width:216px;height:216px;flex-shrink:0;border:2px solid var(--parchment-deep);border-radius:8px;overflow:hidden;touch-action:none;display:grid;}
+  .pixel-cell{box-sizing:border-box;border:0.5px solid rgba(0,0,0,.04);}
+  .char-preview-col{display:flex;flex-direction:column;align-items:center;gap:6px;}
+  .char-preview-label{font-size:11px;color:var(--ink);opacity:.7;font-weight:700;}
+  .char-preview-img{width:96px;height:96px;image-rendering:pixelated;border:2px solid var(--parchment-deep);border-radius:8px;}
+  .palette-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .swatch{width:28px;height:28px;border-radius:6px;border:2px solid transparent;padding:0;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;}
+  .swatch.selected{border-color:var(--ember);box-shadow:0 0 0 2px var(--gold);}
+  .char-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .template-row{display:flex;gap:10px;margin-bottom:12px;}
+  .template-btn{display:flex;flex-direction:column;align-items:center;gap:4px;background:rgba(255,255,255,.3);border:2px solid transparent;border-radius:10px;padding:6px 10px;}
+  .template-thumb{width:48px;height:48px;image-rendering:pixelated;border-radius:6px;}
+  .template-btn span{font-size:10.5px;font-weight:700;color:var(--ink);}
+  .symmetry-toggle{font-size:11.5px;color:var(--ink);display:flex;align-items:center;gap:5px;}
+  .mini-btn{border:none;border-radius:10px;padding:8px 14px;font-family:'Baloo 2',sans-serif;font-weight:700;font-size:12.5px;background:rgba(255,255,255,.4);color:var(--ink);}
+  .mini-btn.primary{background:var(--forest);color:var(--cream);}
+
+  /* ---------- Eltern-Bereich ---------- */
+  #parent-btn{position:absolute;top:10px;right:10px;z-index:520;width:30px;height:30px;border-radius:50%;background:rgba(58,46,31,.55);border:none;color:var(--cream);font-size:13px;}
+  #parent-panel{
+    position:absolute;left:0;right:0;bottom:0;z-index:700;max-height:74%;
+    transform:translateY(100%);transition:transform .35s ease;
+    background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
+    padding:22px 18px 18px 18px;box-shadow:0 -6px 16px rgba(0,0,0,.4);
+    display:flex;flex-direction:column;
+  }
+  #parent-panel.open{transform:translateY(0);}
+  #parent-panel h2{margin:0 0 10px 0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:18px;}
+  .pin-dots{display:flex;gap:14px;justify-content:center;margin:18px 0;}
+  .pin-dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink);background:transparent;}
+  .pin-dot.filled{background:var(--ember);border-color:var(--ember);}
+  .pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:220px;margin:0 auto 16px auto;}
+  .pin-key{padding:14px 0;border-radius:12px;border:none;background:rgba(255,255,255,.4);color:var(--ink);font-family:'Baloo 2',sans-serif;font-weight:700;font-size:18px;}
+  .item-marker-inner{width:28px;height:28px;border-radius:50%;background:rgba(212,167,61,.92);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;font-size:15px;box-shadow:0 2px 6px rgba(0,0,0,.4);}
+  .offline-slider{-webkit-appearance:none;appearance:none;width:100%;height:8px;border-radius:5px;background:rgba(58,46,31,.25);margin:6px 0 4px 0;}
+  .offline-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:2px solid var(--forest);cursor:pointer;}
+  .offline-slider::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--gold);border:2px solid var(--forest);cursor:pointer;}
+
+  /* ---------- Schatz-Kompass ---------- */
+  #treasure-compass{position:absolute;top:104px;left:14px;z-index:500;display:none;flex-direction:column;align-items:center;gap:4px;}
+  #treasure-compass .tc-circle{width:52px;height:52px;border-radius:50%;background:rgba(58,46,31,.72);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 3px 8px rgba(0,0,0,.4);}
+  #treasure-compass-arrow{font-size:24px;font-weight:800;color:var(--gold);display:inline-block;transition:transform .3s ease;}
+  #treasure-compass-dist{font-size:10px;font-weight:800;color:var(--cream);background:rgba(58,46,31,.72);padding:2px 8px;border-radius:999px;}
+</style>
+</head>
+<body>
+
+<div id="error-banner"><button onclick="document.getElementById('error-banner').style.display='none'">✕</button><div id="error-text"></div></div>
+
+<div id="map"></div>
+<canvas id="fog"></canvas>
+
+<div class="hud-banner">
+  <div class="hud-top">
+    <div class="avatar-badge" id="avatar-emoji">🧭</div>
+    <div class="hud-titles">
+      <div class="hud-title-row">
+        <span class="name" id="title-name">Wanderer</span>
+        <span class="lvl" id="level-number">Lvl 1</span>
+      </div>
+      <div class="xp-track"><div class="xp-fill" id="xp-fill"></div></div>
+      <div class="hud-stats" id="stats-line">0 Kacheln erkundet · 0 m² · 0/5 Biome · 0 Schätze</div>
+      <div class="hud-status" id="status-line"></div>
+      <div id="quest-indicator" style="display:none;">🗺️ <span id="quest-indicator-text"></span></div>
+    </div>
+  </div>
+</div>
+
+<div id="treasure-compass">
+  <div class="tc-circle"><div id="treasure-compass-arrow">↑</div></div>
+  <div id="treasure-compass-dist">–</div>
+</div>
+
+<div id="toast-container"></div>
+
+<button id="parent-btn" title="Eltern-Bereich">🔒</button>
+
+<button id="locate-btn" class="round-btn" title="Zu meiner Position zentrieren">📍</button>
+<button id="quest-btn" class="round-btn" title="Quests öffnen">📜</button>
+
+<div id="quest-panel">
+  <h2>Entdecker-Logbuch</h2>
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="biome">🌍 Biome</button>
+    <button class="tab-btn" data-tab="schaetze">💎 Schätze</button>
+    <button class="tab-btn" data-tab="heute">📅 Heute</button>
+    <button class="tab-btn" data-tab="fotos">📸 Fotos</button>
+    <button class="tab-btn" data-tab="charakter">🎨 Charakter</button>
+    <button class="tab-btn" data-tab="inventar">🎒 Inventar</button>
+  </div>
+  <div class="tab-scroll">
+    <div class="tab-content active" id="tab-biome">
+      <p class="sub">Finde diese Orte in der echten Welt:</p>
+      <ul id="quest-list"></ul>
+    </div>
+    <div class="tab-content" id="tab-schaetze">
+      <p class="sub">Entdecke besondere Orte in deiner Umgebung:</p>
+      <div class="stat-pill" id="treasure-count">0 Schätze gefunden</div>
+      <ul id="treasure-list"></ul>
+    </div>
+    <div class="tab-content" id="tab-heute">
+      <p class="sub">Deine Tagesquest (wechselt jeden Tag):</p>
+      <div id="daily-quest-card"></div>
+      <div class="stat-pill" id="streak-pill">🔥 Streak: 0 Tage</div>
+    </div>
+    <div class="tab-content" id="tab-fotos">
+      <p class="sub">Fotografiere diese Dinge in der Natur — eine KI bewertet direkt auf deinem Gerät, ob es passt. Fotos bleiben nur lokal gespeichert:</p>
+      <div id="photo-list"></div>
+    </div>
+    <div class="tab-content" id="tab-charakter">
+      <p class="sub">Male deinen eigenen Entdecker — tippen oder ziehen zum Malen, oder als Vorlage starten:</p>
+      <div class="template-row" id="template-row">
+        <button class="template-btn" data-template="junge"><img class="template-thumb checker-bg" id="template-thumb-junge"><span>Junge</span></button>
+        <button class="template-btn" data-template="maedchen"><img class="template-thumb checker-bg" id="template-thumb-maedchen"><span>Mädchen</span></button>
+      </div>
+      <div class="char-editor">
+        <div id="pixel-grid" class="pixel-grid checker-bg"></div>
+        <div class="char-preview-col">
+          <div class="char-preview-label">Vorschau</div>
+          <img id="char-preview-img" class="char-preview-img checker-bg">
+        </div>
+      </div>
+      <div class="palette-row" id="palette-row"></div>
+      <div class="char-actions">
+        <label class="symmetry-toggle"><input type="checkbox" id="symmetry-toggle" checked> Spiegeln</label>
+        <button id="char-clear-btn" class="mini-btn">🗑️ Leeren</button>
+        <button id="char-save-btn" class="mini-btn primary">✅ Fertig</button>
+      </div>
+    </div>
+    <div class="tab-content" id="tab-inventar">
+      <p class="sub">Von deinen Eltern versteckte Gegenstände, die du gefunden hast:</p>
+      <ul id="inventory-list"></ul>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <span class="test-hint">🧪 Testmodus: Karte antippen simuliert Bewegung.</span>
+    <button class="reset-btn" id="reset-btn">Zurücksetzen</button>
+  </div>
+</div>
+
+<div id="parent-panel">
+  <div id="parent-pin-view">
+    <h2>🔒 Eltern-Bereich</h2>
+    <p class="sub" id="pin-instruction">PIN eingeben</p>
+    <div class="pin-dots" id="pin-dots"></div>
+    <div class="pin-pad" id="pin-pad"></div>
+    <button class="reset-btn" id="parent-cancel-btn">Abbrechen</button>
+  </div>
+  <div id="parent-unlocked-view" style="display:none;">
+    <h2>🔒 Eltern-Bereich</h2>
+    <div class="tab-scroll">
+      <p class="sub">Gegenstand wählen, dann auf die Karte tippen, um ihn dort zu verstecken. Der Nebel ist hier ausgeblendet, damit du die Karte siehst.</p>
+      <label class="symmetry-toggle" style="margin-bottom:10px;"><input type="checkbox" id="compass-toggle"> 🧭 Schatz-Kompass fürs Kind aktivieren</label>
+      <div id="item-picker-row"></div>
+      <p class="sub" id="placement-status"></p>
+      <ul id="placed-items-list"></ul>
+
+      <p class="sub" style="margin-top:16px;border-top:1px solid var(--parchment-deep);padding-top:12px;">🗺️ Quests (eigene Schatzsuchen):</p>
+      <div id="quest-builder-list-view">
+        <ul id="quest-list-admin"></ul>
+        <button class="mini-btn primary" id="quest-new-btn">➕ Neue Quest erstellen</button>
+      </div>
+      <div id="quest-builder-edit-view" style="display:none;">
+        <label style="font-size:11.5px;color:var(--ink);">Name der Quest</label>
+        <input type="text" id="quest-name-input" class="quest-input" placeholder="z.B. Die Schatzsuche im Park">
+        <label style="font-size:11.5px;color:var(--ink);">Text zu Beginn der Quest</label>
+        <textarea id="quest-intro-input" class="quest-textarea" rows="3" placeholder="Vor langer Zeit versteckte ein Pirat …"></textarea>
+
+        <p class="sub" style="margin-top:10px;">📍 Wegpunkte mit Nachricht:</p>
+        <textarea id="waypoint-message-input" class="quest-textarea" rows="2" placeholder="Nachricht, die beim Erreichen erscheint …"></textarea>
+        <button class="mini-btn" id="waypoint-place-btn" style="margin-top:6px;">📍 Punkt auf Karte setzen</button>
+        <ul id="quest-waypoint-list"></ul>
+
+        <p class="sub" style="margin-top:10px;">🎁 Quest-Gegenstände (nur in dieser Quest):</p>
+        <div id="quest-item-picker-row"></div>
+        <button class="mini-btn" id="quest-item-place-btn" style="margin-top:6px;">📍 Gegenstand auf Karte setzen</button>
+        <ul id="quest-item-list"></ul>
+
+        <div class="char-actions" style="margin-top:12px;">
+          <button class="mini-btn primary" id="quest-save-btn">💾 Quest speichern</button>
+          <button class="reset-btn" id="quest-cancel-btn">Abbrechen</button>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top:16px;border-top:1px solid var(--parchment-deep);padding-top:12px;">📥 Karte für offline herunterladen:</p>
+      <div class="char-actions" style="margin-bottom:8px;">
+        <button class="mini-btn" id="offline-center-btn">📍 Zentrum auf Karte wählen</button>
+        <span id="offline-center-status" style="font-size:11px;color:var(--ink);"></span>
+      </div>
+      <label style="font-size:11.5px;color:var(--ink);">Radius: <span id="offline-radius-value">10</span> km</label>
+      <input type="range" id="offline-radius-slider" min="1" max="30" step="1" value="10" class="offline-slider">
+      <p class="sub" id="offline-estimate"></p>
+      <div class="char-actions">
+        <button class="mini-btn primary" id="offline-download-btn">⬇️ Herunterladen</button>
+        <button class="mini-btn" id="offline-cancel-btn" style="display:none;">Abbrechen</button>
+        <button class="reset-btn" id="offline-delete-btn">🗑️ löschen</button>
+      </div>
+      <div id="offline-progress-track" style="display:none;margin-top:8px;">
+        <div class="xp-track"><div class="xp-fill" id="offline-progress-fill"></div></div>
+        <div id="offline-progress-text" style="font-size:11px;margin-top:4px;color:var(--ink);"></div>
+      </div>
+      <p class="sub" id="offline-status-line" style="margin-top:6px;"></p>
+    </div>
+    <div class="panel-footer">
+      <button class="reset-btn" id="parent-change-pin-btn">PIN ändern</button>
+      <button class="reset-btn" id="parent-close-btn">Fertig</button>
+    </div>
+  </div>
+</div>
+
+<input type="file" id="photo-file-input" accept="image/*" capture="environment" style="display:none">
+
+<div id="quest-message-modal" class="quest-modal-overlay" style="display:none;">
+  <div class="quest-modal-box">
+    <div class="quest-modal-icon">📜</div>
+    <div class="quest-modal-title" id="quest-modal-title"></div>
+    <div class="quest-modal-text" id="quest-modal-text"></div>
+    <button class="mini-btn primary" id="quest-modal-close-btn">Weiter</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  // ---------- Diagnose: Fehler sichtbar machen ----------
+  window.addEventListener('error', function(e){
+    try{
+      var banner = document.getElementById('error-banner');
+      var text = document.getElementById('error-text');
+      text.textContent = 'Fehler: ' + e.message + '\n(' + (e.filename||'') + ':' + e.lineno + ')';
+      banner.style.display = 'block';
+    }catch(_){}
+  });
+
+  // ---------- Konfiguration ----------
+  var CELL_SIZE = 25;          // Meter pro Raster-Kachel
+  var REVEAL_FACTOR = 1.6;     // wie weit jede Kachel den Nebel lichtet
+  var XP_PER_CELL = 4;
+  var FOG_COLOR = 'rgba(9,12,10,0.97)';
+  var STORAGE_KEY = 'entdecker_quest_state_v2';
+  var OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+  var WEATHER_URL = 'https://api.open-meteo.com/v1/forecast';
+  var DEFAULT_CENTER = [48.1374, 11.5755]; // München, Fallback bis GPS-Fix
+
+  var BIOMES = [
+    { id:'wald', name:'Wald', icon:'🌲', desc:'Streife durch einen echten Wald', xp:60,
+      filters:['node["natural"="wood"]','way["natural"="wood"]','way["landuse"="forest"]'],
+      matches:function(t){ return t.natural==='wood' || t.landuse==='forest'; } },
+    { id:'wiese', name:'Wiese', icon:'🌾', desc:'Finde eine offene Wiese', xp:60,
+      filters:['way["landuse"="meadow"]','way["natural"="grassland"]','way["landuse"="grass"]'],
+      matches:function(t){ return t.landuse==='meadow' || t.natural==='grassland' || t.landuse==='grass'; } },
+    { id:'wasser', name:'Gewässer', icon:'💧', desc:'Entdecke einen Fluss, Bach oder See', xp:60,
+      filters:['way["natural"="water"]','way["waterway"]','node["waterway"]'],
+      matches:function(t){ return t.natural==='water' || !!t.waterway; } },
+    { id:'park', name:'Park', icon:'🏞️', desc:'Besuche einen Park', xp:60,
+      filters:['way["leisure"="park"]'],
+      matches:function(t){ return t.leisure==='park'; } },
+    { id:'spielplatz', name:'Spielplatz', icon:'🛝', desc:'Finde einen Spielplatz', xp:60,
+      filters:['node["leisure"="playground"]','way["leisure"="playground"]'],
+      matches:function(t){ return t.leisure==='playground'; } },
+  ];
+
+  // Ein Biom-Fund zählt nur dann als NEU, wenn er weiter als dieser Radius von jedem bereits
+  // gefundenen Fund desselben Typs entfernt liegt — sonst gilt es als dieselbe zusammenhängende
+  // Fläche (z.B. derselbe große Wald), durch die einfach weitergelaufen wurde. Eine echte
+  // Grenzprüfung der tatsächlichen OSM-Fläche wäre genauer, ist mit den verfügbaren Positionsdaten
+  // aber nicht sinnvoll umsetzbar — der Abstand zum letzten Fundpunkt ist die praktikable Näherung.
+  var BIOME_CONNECTION_RADIUS = 400; // Meter
+  var BIOME_REPEAT_XP = 20; // XP für jeden weiteren (neuen, nicht verbundenen) Fund desselben Typs
+  var BIOME_COUNT_MILESTONES = [
+    { count:3, xp:100 },
+    { count:6, xp:200 },
+    { count:10, xp:350 },
+  ];
+
+  var TREASURES = [
+    { id:'aussicht', name:'Aussichtspunkt', icon:'🔭', xp:20,
+      filters:['node["tourism"="viewpoint"]','way["tourism"="viewpoint"]'],
+      matches:function(t){ return t.tourism==='viewpoint'; } },
+    { id:'brunnen', name:'Brunnen', icon:'⛲', xp:20,
+      filters:['node["amenity"="fountain"]'],
+      matches:function(t){ return t.amenity==='fountain'; } },
+    { id:'rastplatz', name:'Rastplatz', icon:'🪑', xp:15,
+      filters:['node["leisure"="picnic_table"]','way["leisure"="picnic_table"]','node["amenity"="bench"]'],
+      matches:function(t){ return t.leisure==='picnic_table' || t.amenity==='bench'; } },
+    { id:'kunstwerk', name:'Kunstwerk & Denkmal', icon:'🎨', xp:25,
+      filters:['node["tourism"="artwork"]','node["historic"="monument"]','node["historic"="memorial"]'],
+      matches:function(t){ return t.tourism==='artwork' || t.historic==='monument' || t.historic==='memorial'; } },
+  ];
+
+  var DAILY_QUESTS = [
+    { id:'sonnentag', icon:'☀️', name:'Sonnentag-Entdecker', desc:'Geh heute bei Sonnenschein raus erkunden', xp:40, needsWeather:true,
+      check:function(w){ return !!w && (w.weathercode===0 || w.weathercode===1); } },
+    { id:'wolkentag', icon:'☁️', name:'Wolkenbeobachter', desc:'Geh heute bei bewölktem Himmel raus erkunden', xp:40, needsWeather:true,
+      check:function(w){ return !!w && (w.weathercode===2 || w.weathercode===3); } },
+    { id:'regentag', icon:'🌧️', name:'Regenentdecker', desc:'Zieh den Regenschirm an und geh trotzdem raus', xp:40, needsWeather:true,
+      check:function(w){ return !!w && ((w.weathercode>=51 && w.weathercode<=67) || (w.weathercode>=80 && w.weathercode<=82)); } },
+    { id:'wind', icon:'🍃', name:'Windgesicht', desc:'Geh heute bei kräftigem Wind raus erkunden', xp:40, needsWeather:true,
+      check:function(w){ return !!w && w.windspeed>=20; } },
+    { id:'fruehaufsteher', icon:'🌅', name:'Frühaufsteher', desc:'Geh heute schon vor 9 Uhr raus erkunden', xp:40, needsWeather:false,
+      check:function(w,now){ return now.getHours() < 9; } },
+    { id:'abendspaziergang', icon:'🌇', name:'Abendspaziergang', desc:'Geh heute nach 18 Uhr noch raus erkunden', xp:40, needsWeather:false,
+      check:function(w,now){ return now.getHours() >= 18; } },
+  ];
+
+  // Jede Sammlung mit "species" wird als Bestimmungsbuch geführt: die KI prüft ein Foto
+  // gegen alle Arten der Kategorie und hakt automatisch die erkannte ab. Aufgenommen wurden
+  // nur Arten mit einer eigenen, zuverlässigen ImageNet/MobileNet-Klasse — alles, was nur
+  // über eine grobe Annäherung ("ähnlich wie") erkannt worden wäre (z.B. Kohlmeise, Amsel,
+  // generische "Baum/Blume"-Fotos), wurde bewusst herausgenommen, damit die Häkchen im Spiel
+  // wirklich verlässlich sind. Eichhörnchen bleibt eine einfache Zählung (nur eine Zielart).
+  var SPECIES_XP = 30;
+  var PHOTO_COLLECTIONS = [
+    { id:'schmetterlinge', name:'Schmetterlings-Bestimmungsbuch', icon:'🦋', xpBonus:150,
+      species:[
+        { id:'admiral', name:'Admiral', keywords:['admiral'] },
+        { id:'kohlweissling', name:'Kohlweißling', keywords:['cabbage butterfly'] },
+        { id:'gelbling', name:'Zitronenfalter & Gelblinge', keywords:['sulphur butterfly'] },
+        { id:'blaeuling', name:'Bläuling', keywords:['lycaenid'] },
+        { id:'wiesenvoegelchen', name:'Wiesenvögelchen', keywords:['ringlet'] },
+      ] },
+    { id:'kaefer', name:'Käfer- & Insekten-Bestimmungsbuch', icon:'🐞', xpBonus:150,
+      species:[
+        { id:'marienkaefer', name:'Marienkäfer', keywords:['ladybug'] },
+        { id:'ameise', name:'Ameise', keywords:['ant'] },
+        { id:'biene', name:'Biene', keywords:['bee'] },
+        { id:'libelle', name:'Libelle', keywords:['dragonfly','damselfly'] },
+        { id:'heuschrecke', name:'Heuschrecke', keywords:['grasshopper','cricket'] },
+        { id:'gottesanbeterin', name:'Gottesanbeterin', keywords:['mantis'] },
+      ] },
+    { id:'eichhoernchen', name:'Eichhörnchen', icon:'🐿️', target:2, xpPerPhoto:30, xpBonus:90 },
+    { id:'voegel', name:'Vogel-Bestimmungsbuch', icon:'🐦', xpBonus:120,
+      species:[
+        { id:'elster', name:'Elster', keywords:['magpie'] },
+        { id:'eichelhaeher', name:'Eichelhäher', keywords:['jay'] },
+        { id:'stieglitz', name:'Stieglitz', keywords:['goldfinch'] },
+      ] },
+    { id:'pilze', name:'Pilz-Bestimmungsbuch', icon:'🍄', xpBonus:150,
+      species:[
+        { id:'lamellenpilz', name:'Lamellenpilz', keywords:['agaric'] },
+        { id:'roehrenpilz', name:'Röhrenpilz', keywords:['bolete'] },
+        { id:'korallenpilz', name:'Korallenpilz', keywords:['coral fungus'] },
+        { id:'stinkmorchel', name:'Stinkmorchel', keywords:['stinkhorn'] },
+        { id:'erdstern', name:'Erdstern', keywords:['earthstar'] },
+      ] },
+    { id:'schnecken', name:'Schnecken-Bestimmungsbuch', icon:'🐌', xpBonus:80,
+      species:[
+        { id:'gehaeuseschnecke', name:'Gehäuseschnecke', keywords:['snail'] },
+        { id:'nacktschnecke', name:'Nacktschnecke', keywords:['slug'] },
+      ] },
+  ];
+
+  // Nur noch für die (einzige) nicht-artspezifische Sammlung benötigt
+  var RECOGNITION_KEYWORDS = {
+    eichhoernchen:['squirrel','fox squirrel']
+  };
+
+  // ---------- Charakter-Editor & Ausrüstung ----------
+  var GRID_SIZE = 12;
+  var PALETTE = ['#3A2E1F','#F5EBD1','#E4B98F','#B23A48','#D4A73D','#2D4A34','#4C7A5E','#3E6FA8','#8B5FA3','#F2F2F2','#111111','#8A5A2B'];
+
+  // Vorgefertigte Pixel-Vorlagen (12x12, zeilenweise) als Startpunkt im Charakter-Editor
+  var CHARACTER_TEMPLATES = (function(){
+    var BROWN='#8A5A2B', SKIN='#E4B98F', EYE='#111111', MOUTH='#B23A48', SHIRT_BOY='#3E6FA8';
+    var GOLD='#D4A73D', SHIRT_GIRL='#8B5FA3';
+    var n = null;
+    return {
+      junge: [
+        n,n,n,BROWN,BROWN,BROWN,BROWN,BROWN,BROWN,n,n,n,
+        n,n,BROWN,BROWN,BROWN,BROWN,BROWN,BROWN,BROWN,BROWN,n,n,
+        n,n,BROWN,BROWN,SKIN,SKIN,SKIN,SKIN,BROWN,BROWN,n,n,
+        n,n,BROWN,BROWN,SKIN,SKIN,SKIN,SKIN,BROWN,BROWN,n,n,
+        n,n,BROWN,SKIN,SKIN,EYE,EYE,SKIN,SKIN,BROWN,n,n,
+        n,n,BROWN,SKIN,SKIN,SKIN,SKIN,SKIN,SKIN,BROWN,n,n,
+        n,n,BROWN,SKIN,SKIN,MOUTH,MOUTH,SKIN,SKIN,BROWN,n,n,
+        n,n,n,BROWN,SKIN,SKIN,SKIN,SKIN,BROWN,n,n,n,
+        n,n,n,n,SKIN,SKIN,SKIN,SKIN,n,n,n,n,
+        n,n,n,n,n,SKIN,SKIN,n,n,n,n,n,
+        n,n,n,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,n,n,n,
+        n,n,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,SHIRT_BOY,n,n
+      ],
+      maedchen: [
+        n,n,n,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,n,n,n,
+        n,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,GOLD,n,
+        n,GOLD,GOLD,GOLD,SKIN,SKIN,SKIN,SKIN,GOLD,GOLD,GOLD,n,
+        n,GOLD,GOLD,GOLD,SKIN,SKIN,SKIN,SKIN,GOLD,GOLD,GOLD,n,
+        n,GOLD,GOLD,SKIN,SKIN,EYE,EYE,SKIN,SKIN,GOLD,GOLD,n,
+        n,GOLD,GOLD,SKIN,SKIN,SKIN,SKIN,SKIN,SKIN,GOLD,GOLD,n,
+        n,GOLD,GOLD,SKIN,SKIN,MOUTH,MOUTH,SKIN,SKIN,GOLD,GOLD,n,
+        n,GOLD,GOLD,SKIN,SKIN,SKIN,SKIN,SKIN,SKIN,GOLD,GOLD,n,
+        n,GOLD,GOLD,n,SKIN,SKIN,SKIN,SKIN,n,GOLD,GOLD,n,
+        n,GOLD,GOLD,n,n,SKIN,SKIN,n,n,GOLD,GOLD,n,
+        n,GOLD,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,GOLD,n,
+        GOLD,GOLD,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,SHIRT_GIRL,GOLD,GOLD
+      ]
+    };
+  })();
+
+  var ITEM_CATEGORIES = [
+    { id:'ruestung', name:'Rüstung', icon:'🛡️' },
+    { id:'waffen', name:'Waffen', icon:'⚔️' },
+    { id:'nahrung', name:'Nahrung', icon:'🍎' },
+    { id:'schaetze', name:'Schätze', icon:'💰' },
+  ];
+  var ITEM_DEFINITIONS = [
+    { id:'holzschwert', name:'Holzschwert', icon:'🗡️', desc:'Ein tapferes Holzschwert', category:'waffen' },
+    { id:'schild', name:'Schild', icon:'🛡️', desc:'Schützt vor Regen und Drachen', category:'ruestung' },
+    { id:'stiefel', name:'Wanderstiefel', icon:'🥾', desc:'Für die längsten Wege', category:'ruestung' },
+    { id:'krone', name:'Krone', icon:'👑', desc:'Für echte Entdecker-Könige', category:'ruestung' },
+    { id:'apfel', name:'Apfel', icon:'🍎', desc:'Knackig-frisch', category:'nahrung' },
+    { id:'beeren', name:'Waldbeeren', icon:'🫐', desc:'Frisch gepflückt', category:'nahrung' },
+    { id:'honig', name:'Honigtopf', icon:'🍯', desc:'Süß und golden', category:'nahrung' },
+    { id:'keks', name:'Lebkuchen', icon:'🍪', desc:'Stärkt für die nächste Etappe', category:'nahrung' },
+    { id:'muenze', name:'Goldmünze', icon:'🪙', desc:'Glänzt in der Sonne', category:'schaetze' },
+    { id:'zaubertrank', name:'Zaubertrank', icon:'🧪', desc:'Ein glitzernder Zaubertrank', category:'schaetze' },
+    { id:'schatzkarte', name:'Schatzkarte', icon:'🗺️', desc:'Eine geheimnisvolle alte Karte', category:'schaetze' },
+    { id:'fernglas', name:'Fernglas', icon:'🔭', desc:'Sieht weiter als jedes Auge', category:'schaetze' },
+    { id:'laterne', name:'Laterne', icon:'🏮', desc:'Leuchtet im dunkelsten Wald', category:'schaetze' },
+    { id:'feder', name:'Federkiel', icon:'🪶', desc:'Zum Eintragen ins Logbuch', category:'schaetze' },
+  ];
+  var ITEM_PICKUP_RADIUS = 18; // Meter
+
+  // ---------- Zustand ----------
+  function todayStr(d){
+    d = d || new Date();
+    return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  }
+  function normalizeState(s){
+    s = s || {};
+    s.cells = s.cells || {};
+    s.discovered = s.discovered || {};
+    s.biomeMilestones = s.biomeMilestones || {};
+    BIOMES.forEach(function(b){
+      var existing = s.discovered[b.id];
+      if(existing === true){
+        // Altes Format (nur "gefunden ja/nein") — als ein bereits gezählter Fund übernehmen
+        s.discovered[b.id] = [{ lat:DEFAULT_CENTER[0], lng:DEFAULT_CENTER[1] }];
+      } else if(!Array.isArray(existing)){
+        s.discovered[b.id] = [];
+      }
+      if(!Array.isArray(s.biomeMilestones[b.id])) s.biomeMilestones[b.id] = [];
+    });
+    s.poiCollected = s.poiCollected || {};
+    s.photoProgress = s.photoProgress || {};
+    PHOTO_COLLECTIONS.forEach(function(c){
+      if(!s.photoProgress[c.id]) s.photoProgress[c.id] = { count:0, bonusAwarded:false };
+    });
+    s.streak = s.streak || { lastDate:null, count:0 };
+    s.dailyQuest = s.dailyQuest || { date:null, questId:null, done:false };
+    s.xp = s.xp || 0;
+    s.character = s.character || { pixels: new Array(GRID_SIZE*GRID_SIZE).fill(null) };
+    if(!s.character.pixels || s.character.pixels.length !== GRID_SIZE*GRID_SIZE){
+      s.character.pixels = new Array(GRID_SIZE*GRID_SIZE).fill(null);
+    }
+    s.inventory = s.inventory || {};
+    s.placedItems = s.placedItems || [];
+    s.parentPin = s.parentPin || null;
+    s.offlineArea = s.offlineArea || { center:null, radiusKm:10, tileCount:0, downloadedAt:null };
+    s.quests = s.quests || [];
+    s.questProgress = s.questProgress || {};
+    s.activeQuestId = s.activeQuestId || null;
+    s.treasureCompassEnabled = s.treasureCompassEnabled || false;
+    s.speciesFound = s.speciesFound || {};
+    PHOTO_COLLECTIONS.forEach(function(c){
+      if(c.species && !s.speciesFound[c.id]) s.speciesFound[c.id] = {};
+    });
+    return s;
+  }
+  function loadState(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if(raw) return normalizeState(JSON.parse(raw));
+    }catch(e){}
+    return normalizeState({});
+  }
+  var state = loadState();
+  function saveState(){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){}
+  }
+
+  // ---------- Karte ----------
+  var map = L.map('map', { zoomControl:false, attributionControl:true, minZoom:3, maxZoom:19 })
+    .setView(DEFAULT_CENTER, 16);
+  L.control.zoom({ position:'bottomleft' }).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende'
+  }).addTo(map);
+
+  function renderCharacterCanvas(scale){
+    var canvas = document.createElement('canvas');
+    canvas.width = GRID_SIZE*scale; canvas.height = GRID_SIZE*scale;
+    var ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = false;
+    for(var y=0;y<GRID_SIZE;y++){
+      for(var x=0;x<GRID_SIZE;x++){
+        var color = state.character.pixels[y*GRID_SIZE+x];
+        if(color){ ctx.fillStyle = color; ctx.fillRect(x*scale, y*scale, scale, scale); }
+      }
+    }
+    return canvas;
+  }
+  function hasCustomCharacter(){
+    return state.character.pixels.some(function(p){ return !!p; });
+  }
+  var characterDataURLCache = { scale:null, url:null };
+  function getCharacterDataURL(scale){
+    if(characterDataURLCache.scale===scale && characterDataURLCache.url) return characterDataURLCache.url;
+    var url = renderCharacterCanvas(scale).toDataURL();
+    characterDataURLCache = { scale:scale, url:url };
+    return url;
+  }
+  function invalidateCharacterCache(){ characterDataURLCache = { scale:null, url:null }; }
+
+  function makeAvatarIcon(emoji){
+    var inner = hasCustomCharacter()
+      ? '<img src="'+getCharacterDataURL(4)+'" style="width:100%;height:100%;image-rendering:pixelated;">'
+      : emoji;
+    return L.divIcon({
+      className:'player-avatar',
+      html:'<div class="avatar-wrap"><div class="heading-cone"></div><div class="avatar-emoji">'+inner+'</div></div>',
+      iconSize:[70,70], iconAnchor:[35,35]
+    });
+  }
+  var lastEmoji = '🧭';
+  var playerMarker = L.marker(DEFAULT_CENTER, { icon: makeAvatarIcon(lastEmoji) }).addTo(map);
+
+  // ---------- Blickrichtung (Kompass) ----------
+  var currentHeading = null;
+  var orientationAttached = false;
+  function applyHeadingToMarker(){
+    var el = playerMarker.getElement();
+    if(!el) return;
+    var cone = el.querySelector('.heading-cone');
+    if(!cone) return;
+    if(currentHeading===null){
+      cone.style.opacity = '0';
+    } else {
+      cone.style.opacity = '1';
+      cone.style.transform = 'translate(-50%,-100%) rotate('+currentHeading+'deg)';
+    }
+  }
+  function attachOrientationListener(){
+    if(orientationAttached) return;
+    orientationAttached = true;
+    var handler = function(e){
+      var heading = null;
+      if(typeof e.webkitCompassHeading === 'number' && !isNaN(e.webkitCompassHeading)){
+        heading = e.webkitCompassHeading; // iOS: bereits 0=Norden, im Uhrzeigersinn
+      } else if(e.alpha !== null && e.alpha !== undefined){
+        heading = (360 - e.alpha) % 360; // Android/Standard: alpha läuft entgegengesetzt
+      }
+      if(heading !== null && !isNaN(heading)){
+        currentHeading = (heading + 360) % 360;
+        applyHeadingToMarker();
+      }
+    };
+    window.addEventListener('deviceorientationabsolute', handler, true);
+    window.addEventListener('deviceorientation', handler, true);
+  }
+  function startHeadingTracking(){
+    if(typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function'){
+      DeviceOrientationEvent.requestPermission().then(function(state){
+        if(state === 'granted'){ attachOrientationListener(); }
+      }).catch(function(){ /* außerhalb einer Nutzer-Geste auf iOS erwartet, kein Problem */ });
+    } else if('DeviceOrientationEvent' in window){
+      attachOrientationListener();
+    }
+  }
+  startHeadingTracking(); // funktioniert direkt auf Android/Desktop; auf iOS erst nach Tap unten
+
+  // ---------- Nebel (Fog of War) ----------
+  var fogCanvas = document.getElementById('fog');
+  var fogCtx = fogCanvas.getContext('2d');
+  var dpr = Math.max(1, window.devicePixelRatio || 1);
+
+  function metersPerPixel(lat, zoom){
+    return 156543.03392 * Math.cos(lat*Math.PI/180) / Math.pow(2, zoom);
+  }
+
+  function redrawFog(){
+    if(parentPlacementMode){
+      fogCanvas.style.display = 'none';
+      return;
+    }
+    fogCanvas.style.display = '';
+    var size = map.getSize();
+    if(size.x === 0 || size.y === 0) return;
+    fogCanvas.width = Math.round(size.x*dpr);
+    fogCanvas.height = Math.round(size.y*dpr);
+    fogCanvas.style.width = size.x+'px';
+    fogCanvas.style.height = size.y+'px';
+    fogCtx.setTransform(dpr,0,0,dpr,0,0);
+    fogCtx.globalCompositeOperation = 'source-over';
+    fogCtx.clearRect(0,0,size.x,size.y);
+    fogCtx.fillStyle = FOG_COLOR;
+    fogCtx.fillRect(0,0,size.x,size.y);
+
+    fogCtx.globalCompositeOperation = 'destination-out';
+    var zoom = map.getZoom();
+    var keys = Object.keys(state.cells);
+    for(var i=0;i<keys.length;i++){
+      var c = state.cells[keys[i]];
+      var pt = map.latLngToContainerPoint([c.lat, c.lng]);
+      if(pt.x < -60 || pt.x > size.x+60 || pt.y < -60 || pt.y > size.y+60) continue;
+      var r = (CELL_SIZE*REVEAL_FACTOR) / metersPerPixel(c.lat, zoom);
+      var grad = fogCtx.createRadialGradient(pt.x, pt.y, 0, pt.x, pt.y, r);
+      grad.addColorStop(0, 'rgba(0,0,0,1)');
+      grad.addColorStop(0.72, 'rgba(0,0,0,1)');
+      grad.addColorStop(1, 'rgba(0,0,0,0)');
+      fogCtx.fillStyle = grad;
+      fogCtx.beginPath();
+      fogCtx.arc(pt.x, pt.y, r, 0, Math.PI*2);
+      fogCtx.fill();
+    }
+    fogCtx.globalCompositeOperation = 'source-over';
+  }
+  map.on('move zoom resize', redrawFog);
+  window.addEventListener('resize', function(){ map.invalidateSize(); redrawFog(); });
+  if(window.ResizeObserver){
+    new ResizeObserver(function(){ map.invalidateSize(); redrawFog(); }).observe(document.getElementById('map'));
+  }
+  // Absicherung gegen Timing-/Layout-Race-Conditions beim ersten Laden
+  [0, 100, 400, 1000].forEach(function(ms){
+    setTimeout(function(){ map.invalidateSize(); redrawFog(); }, ms);
+  });
+
+  // ---------- Raster-Hilfsfunktionen ----------
+  function cellKeyFor(lat,lng){
+    var mLat = 111320;
+    var mLng = 111320 * Math.cos(lat*Math.PI/180);
+    var cx = Math.floor((lng*mLng)/CELL_SIZE);
+    var cy = Math.floor((lat*mLat)/CELL_SIZE);
+    return cx+'_'+cy;
+  }
+  function haversine(lat1,lng1,lat2,lng2){
+    var R=6371000, toRad=Math.PI/180;
+    var dLat=(lat2-lat1)*toRad, dLng=(lng2-lng1)*toRad;
+    var a=Math.sin(dLat/2)*Math.sin(dLat/2) + Math.cos(lat1*toRad)*Math.cos(lat2*toRad)*Math.sin(dLng/2)*Math.sin(dLng/2);
+    return 2*R*Math.asin(Math.sqrt(a));
+  }
+  function bearingTo(lat1,lng1,lat2,lng2){
+    var toRad=Math.PI/180, toDeg=180/Math.PI;
+    var y = Math.sin((lng2-lng1)*toRad) * Math.cos(lat2*toRad);
+    var x = Math.cos(lat1*toRad)*Math.sin(lat2*toRad) - Math.sin(lat1*toRad)*Math.cos(lat2*toRad)*Math.cos((lng2-lng1)*toRad);
+    return (Math.atan2(y,x)*toDeg + 360) % 360;
+  }
+
+  // ---------- Level / XP ----------
+  function levelForXp(xp){ return Math.floor(1 + Math.pow(xp/60, 1/2.2)); }
+  function xpForLevel(level){ return 60*Math.pow(Math.max(level-1,0), 2.2); }
+  function titleForLevel(level){
+    if(level>=12) return {emoji:'👑', name:'Entdecker-Meister'};
+    if(level>=8)  return {emoji:'🏕️', name:'Landvermesser'};
+    if(level>=5)  return {emoji:'🗺️', name:'Kartograph'};
+    if(level>=3)  return {emoji:'🥾', name:'Pfadfinder'};
+    return {emoji:'🧭', name:'Wanderer'};
+  }
+  function formatArea(m2){
+    if(m2>=1000000) return (m2/1000000).toFixed(2)+' km²';
+    if(m2>=10000) return (m2/10000).toFixed(2)+' ha';
+    return Math.round(m2)+' m²';
+  }
+
+  var elEmoji = document.getElementById('avatar-emoji');
+  var elTitleName = document.getElementById('title-name');
+  var elLevelNumber = document.getElementById('level-number');
+  var elXpFill = document.getElementById('xp-fill');
+  var elStats = document.getElementById('stats-line');
+  var elStatus = document.getElementById('status-line');
+
+  function updateHUD(){
+    var level = levelForXp(state.xp);
+    var title = titleForLevel(level);
+    var base = xpForLevel(level), next = xpForLevel(level+1);
+    var progress = next>base ? Math.max(0,Math.min(1,(state.xp-base)/(next-base))) : 1;
+    elEmoji.innerHTML = hasCustomCharacter()
+      ? '<img src="'+getCharacterDataURL(3)+'" style="width:100%;height:100%;image-rendering:pixelated;">'
+      : title.emoji;
+    elTitleName.textContent = title.name;
+    elLevelNumber.textContent = 'Lvl '+level;
+    elXpFill.style.width = (progress*100).toFixed(1)+'%';
+    var cellCount = Object.keys(state.cells).length;
+    var discCount = BIOMES.filter(function(b){ return state.discovered[b.id].length>0; }).length;
+    var treasureCount = Object.keys(state.poiCollected).length;
+    var line = cellCount+' Kacheln · '+formatArea(cellCount*CELL_SIZE*CELL_SIZE)+' · '+discCount+'/'+BIOMES.length+' Biome · '+treasureCount+' Schätze';
+    if(state.streak.count>0) line += ' · 🔥'+state.streak.count;
+    elStats.textContent = line;
+    if(title.emoji !== lastEmoji){
+      lastEmoji = title.emoji;
+      playerMarker.setIcon(makeAvatarIcon(lastEmoji));
+      applyHeadingToMarker();
+    }
+  }
+
+  // ---------- Toasts ----------
+  var toastContainer = document.getElementById('toast-container');
+  function showToast(text){
+    var el = document.createElement('div');
+    el.className = 'toast';
+    el.textContent = text;
+    toastContainer.appendChild(el);
+    requestAnimationFrame(function(){ el.classList.add('show'); });
+    setTimeout(function(){
+      el.classList.remove('show');
+      setTimeout(function(){ el.remove(); }, 400);
+    }, 3200);
+  }
+
+  // ---------- Tabs ----------
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.tab-content').forEach(function(c){ c.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+      if(btn.dataset.tab === 'fotos'){ ensureModel().catch(function(){}); }
+    });
+  });
+
+  // ---------- Quest-Panel: Biome ----------
+  var questPanel = document.getElementById('quest-panel');
+  var questList = document.getElementById('quest-list');
+  document.getElementById('quest-btn').addEventListener('click', function(){ questPanel.classList.toggle('open'); });
+
+  function renderQuestList(){
+    questList.innerHTML = '';
+    BIOMES.forEach(function(b){
+      var count = state.discovered[b.id].length;
+      var awarded = state.biomeMilestones[b.id];
+      var nextMilestone = BIOME_COUNT_MILESTONES.filter(function(m){ return awarded.indexOf(m.count)===-1; })[0];
+      var desc;
+      if(count === 0){
+        desc = b.desc;
+      } else if(nextMilestone){
+        desc = count+'× gefunden · nächster Bonus bei '+nextMilestone.count+'× (+'+nextMilestone.xp+' XP)';
+      } else {
+        desc = count+'× gefunden · alle Bonusstufen erreicht 🏅';
+      }
+      var li = document.createElement('li');
+      if(count>0) li.classList.add('done');
+      li.innerHTML =
+        '<div class="q-icon">'+b.icon+'</div>'+
+        '<div class="q-info"><div class="q-name">'+b.name+'</div><div class="q-desc">'+desc+'</div></div>'+
+        '<div class="q-status">'+(count>0?'✅':'❓')+'</div>';
+      questList.appendChild(li);
+    });
+  }
+
+  function isNewBiomeInstance(biomeId, lat, lng){
+    var instances = state.discovered[biomeId];
+    for(var i=0;i<instances.length;i++){
+      if(haversine(lat,lng,instances[i].lat,instances[i].lng) <= BIOME_CONNECTION_RADIUS) return false;
+    }
+    return true;
+  }
+  function recordBiomeInstance(biomeId, lat, lng){
+    if(!isNewBiomeInstance(biomeId, lat, lng)) return;
+    var b = BIOMES.filter(function(x){ return x.id===biomeId; })[0];
+    if(!b) return;
+    var arr = state.discovered[biomeId];
+    arr.push({ lat:lat, lng:lng });
+    var isFirst = arr.length === 1;
+    var xpGain = isFirst ? b.xp : BIOME_REPEAT_XP;
+    state.xp += xpGain;
+    showToast(isFirst
+      ? b.icon+' '+b.name+' entdeckt! Erstes Mal! +'+xpGain+' XP'
+      : b.icon+' '+b.name+' Nr. '+arr.length+' gefunden! +'+xpGain+' XP');
+    BIOME_COUNT_MILESTONES.forEach(function(m){
+      if(arr.length === m.count && state.biomeMilestones[biomeId].indexOf(m.count)===-1){
+        state.biomeMilestones[biomeId].push(m.count);
+        state.xp += m.xp;
+        showToast('🏅 '+m.count+'× '+b.name+' gefunden — Bonus! +'+m.xp+' XP');
+      }
+    });
+  }
+
+  // ---------- Quest-Panel: Schätze ----------
+  var treasureList = document.getElementById('treasure-list');
+  var treasureCountEl = document.getElementById('treasure-count');
+  function renderTreasureList(){
+    treasureList.innerHTML = '';
+    var values = Object.keys(state.poiCollected).map(function(k){ return state.poiCollected[k]; });
+    treasureCountEl.textContent = values.length+' Schätze insgesamt gefunden';
+    TREASURES.forEach(function(t){
+      var count = values.filter(function(v){ return v===t.id; }).length;
+      var li = document.createElement('li');
+      li.innerHTML =
+        '<div class="q-icon">'+t.icon+'</div>'+
+        '<div class="q-info"><div class="q-name">'+t.name+'</div><div class="q-desc">'+count+'× gefunden (+'+t.xp+' XP je Fund)</div></div>';
+      treasureList.appendChild(li);
+    });
+  }
+
+  // ---------- Umgebungs-Check (Overpass: Biome + Schätze zusammen) ----------
+  var lastEnvCheck = { time:0, lat:null, lng:null };
+  function buildEnvQuery(lat,lng){
+    var clauses = [];
+    BIOMES.forEach(function(b){ b.filters.forEach(function(f){ clauses.push(f+'(around:40,'+lat+','+lng+');'); }); });
+    TREASURES.forEach(function(t){ t.filters.forEach(function(f){ clauses.push(f+'(around:35,'+lat+','+lng+');'); }); });
+    return '[out:json][timeout:10];('+clauses.join('')+');out tags 40;';
+  }
+  function checkEnvironment(lat,lng){
+    var now = Date.now();
+    var movedFar = lastEnvCheck.lat===null || haversine(lat,lng,lastEnvCheck.lat,lastEnvCheck.lng) > 25;
+    if(now - lastEnvCheck.time < 20000 || !movedFar) return;
+    lastEnvCheck = { time:now, lat:lat, lng:lng };
+    if(navigator.onLine === false) return;
+    elStatus.textContent = '📡 Prüfe Umgebung …';
+    var query = buildEnvQuery(lat,lng);
+    fetch(OVERPASS_URL, { method:'POST', body:'data='+encodeURIComponent(query) })
+      .then(function(res){ elStatus.textContent=''; if(!res.ok) throw new Error('Overpass HTTP '+res.status); return res.json(); })
+      .then(function(data){
+        var matchedBiomeIds = {};
+        (data.elements||[]).forEach(function(el){
+          var tags = el.tags || {};
+          BIOMES.forEach(function(b){ if(!matchedBiomeIds[b.id] && b.matches(tags)) matchedBiomeIds[b.id]=true; });
+          TREASURES.forEach(function(t){
+            if(t.matches(tags)){
+              var key = el.type+'/'+el.id;
+              if(!state.poiCollected[key]){
+                state.poiCollected[key] = t.id;
+                state.xp += t.xp;
+                showToast(t.icon+' Schatz gefunden: '+t.name+'! +'+t.xp+' XP');
+              }
+            }
+          });
+        });
+        Object.keys(matchedBiomeIds).forEach(function(biomeId){ recordBiomeInstance(biomeId, lat, lng); });
+        updateHUD(); renderQuestList(); renderTreasureList(); saveState();
+      })
+      .catch(function(e){ elStatus.textContent=''; console.warn('Umgebungs-Check fehlgeschlagen', e); });
+  }
+
+  // ---------- Wetter & Tagesquest ----------
+  var weatherCache = { time:0, data:null };
+  function getWeather(lat,lng){
+    if(Date.now()-weatherCache.time < 15*60*1000 && weatherCache.data) return Promise.resolve(weatherCache.data);
+    var url = WEATHER_URL+'?latitude='+lat+'&longitude='+lng+'&current_weather=true';
+    return fetch(url).then(function(res){
+      if(!res.ok) throw new Error('Wetter HTTP '+res.status);
+      return res.json();
+    }).then(function(data){
+      weatherCache = { time:Date.now(), data:data.current_weather };
+      return data.current_weather;
+    });
+  }
+  // Tagesvorhersage (nicht nur Momentanwetter) — entscheidet, welche Tagesquest heute
+  // überhaupt realistisch ist (an einem knochentrockenen Tag wird kein "Regentag" vergeben).
+  function getDailyForecast(lat,lng){
+    var url = WEATHER_URL+'?latitude='+lat+'&longitude='+lng+'&daily=weathercode,windspeed_10m_max&timezone=auto';
+    return fetch(url).then(function(res){
+      if(!res.ok) throw new Error('Vorhersage HTTP '+res.status);
+      return res.json();
+    }).then(function(data){
+      if(!data.daily || !data.daily.weathercode || !data.daily.weathercode.length) throw new Error('Keine Vorhersagedaten');
+      return { weathercode:data.daily.weathercode[0], windspeed:data.daily.windspeed_10m_max[0] };
+    });
+  }
+  function pickQuestFromCandidates(candidates){
+    var d = new Date();
+    var key = d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate();
+    var hash = 0;
+    for(var i=0;i<key.length;i++) hash = (hash*31 + key.charCodeAt(i)) >>> 0;
+    return candidates[hash % candidates.length];
+  }
+  function ensureDailyQuest(){
+    var today = todayStr();
+    if(state.dailyQuest.date === today) return Promise.resolve();
+    var pos = playerMarker.getLatLng();
+    return getDailyForecast(pos.lat, pos.lng).then(function(forecast){
+      // Nur Quests anbieten, deren Wetterbedingung laut Vorhersage heute auch eintritt
+      var candidates = DAILY_QUESTS.filter(function(q){ return !q.needsWeather || q.check(forecast, new Date()); });
+      if(candidates.length === 0) candidates = DAILY_QUESTS.filter(function(q){ return !q.needsWeather; });
+      if(candidates.length === 0) candidates = DAILY_QUESTS;
+      var quest = pickQuestFromCandidates(candidates);
+      state.dailyQuest = { date:today, questId:quest.id, done:false };
+      saveState();
+    }).catch(function(e){
+      console.warn('Wettervorhersage nicht verfügbar, wähle wetterunabhängige Tagesquest', e);
+      var fallback = DAILY_QUESTS.filter(function(q){ return !q.needsWeather; });
+      var quest = pickQuestFromCandidates(fallback.length ? fallback : DAILY_QUESTS);
+      state.dailyQuest = { date:today, questId:quest.id, done:false };
+      saveState();
+    });
+  }
+  function renderDailyQuest(){
+    var quest = DAILY_QUESTS.filter(function(q){ return q.id===state.dailyQuest.questId; })[0] || DAILY_QUESTS[0];
+    var done = state.dailyQuest.done && state.dailyQuest.date===todayStr();
+    document.getElementById('daily-quest-card').innerHTML =
+      '<div class="daily-card '+(done?'done':'')+'">'+
+        '<div style="font-size:34px;">'+quest.icon+'</div>'+
+        '<div class="q-name" style="font-size:16px;margin-top:4px;">'+quest.name+'</div>'+
+        '<div class="q-desc">'+quest.desc+'</div>'+
+        '<div class="q-status" style="margin-top:8px;">'+(done?'✅ Erfüllt (+'+quest.xp+' XP)':'❓ Noch offen')+'</div>'+
+      '</div>';
+    document.getElementById('streak-pill').textContent = '🔥 Streak: '+state.streak.count+' Tag(e) in Folge';
+  }
+  function checkDailyQuest(lat,lng){
+    ensureDailyQuest().then(function(){
+      if(state.dailyQuest.done) return;
+      var quest = DAILY_QUESTS.filter(function(q){ return q.id===state.dailyQuest.questId; })[0];
+      if(!quest) return;
+      var weatherPromise = quest.needsWeather ? getWeather(lat,lng) : Promise.resolve(null);
+      return weatherPromise.then(function(weather){
+        if(quest.check(weather, new Date())){
+          state.dailyQuest.done = true;
+          state.xp += quest.xp;
+          showToast(quest.icon+' Tagesquest erfüllt: '+quest.name+'! +'+quest.xp+' XP');
+          updateHUD(); renderDailyQuest(); saveState();
+        }
+      });
+    }).catch(function(e){ console.warn('Tagesquest-Check fehlgeschlagen', e); });
+  }
+
+  // ---------- Streak ----------
+  function checkStreak(){
+    var today = todayStr();
+    if(state.streak.lastDate === today) return;
+    var y = new Date(); y.setDate(y.getDate()-1);
+    var yesterday = todayStr(y);
+    if(state.streak.lastDate === yesterday){ state.streak.count += 1; }
+    else { state.streak.count = 1; }
+    state.streak.lastDate = today;
+    var bonus = Math.min(10*state.streak.count, 100);
+    state.xp += bonus;
+    showToast('🔥 '+state.streak.count+' Tag(e) in Folge draußen! +'+bonus+' XP');
+    updateHUD(); renderDailyQuest(); saveState();
+  }
+
+  // ---------- Fotos (IndexedDB) ----------
+  var DB_NAME='entdecker_quest_photos', DB_VERSION=1, STORE='photos';
+  function openPhotoDB(){
+    return new Promise(function(resolve,reject){
+      if(!('indexedDB' in window)){ reject(new Error('IndexedDB nicht verfügbar')); return; }
+      var req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = function(){ req.result.createObjectStore(STORE, {keyPath:'id'}); };
+      req.onsuccess = function(){ resolve(req.result); };
+      req.onerror = function(){ reject(req.error); };
+    });
+  }
+  function savePhoto(collectionId, dataUrl){
+    return openPhotoDB().then(function(db){
+      return new Promise(function(resolve,reject){
+        var id = collectionId+'_'+Date.now();
+        var tx = db.transaction(STORE,'readwrite');
+        tx.objectStore(STORE).put({ id:id, collectionId:collectionId, dataUrl:dataUrl, ts:Date.now() });
+        tx.oncomplete = function(){ resolve(id); };
+        tx.onerror = function(){ reject(tx.error); };
+      });
+    });
+  }
+  function getPhotosForCollection(collectionId){
+    return openPhotoDB().then(function(db){
+      return new Promise(function(resolve,reject){
+        var tx = db.transaction(STORE,'readonly');
+        var req = tx.objectStore(STORE).getAll();
+        req.onsuccess = function(){ resolve(req.result.filter(function(p){ return p.collectionId===collectionId; })); };
+        req.onerror = function(){ reject(req.error); };
+      });
+    });
+  }
+  function resizeImageFile(file, maxWidth, quality){
+    return new Promise(function(resolve,reject){
+      var reader = new FileReader();
+      reader.onerror = function(){ reject(reader.error); };
+      reader.onload = function(){
+        var img = new Image();
+        img.onerror = function(){ reject(new Error('Bild konnte nicht geladen werden')); };
+        img.onload = function(){
+          var scale = Math.min(1, maxWidth/img.width);
+          var w = Math.round(img.width*scale), h = Math.round(img.height*scale);
+          var canvas = document.createElement('canvas');
+          canvas.width=w; canvas.height=h;
+          canvas.getContext('2d').drawImage(img,0,0,w,h);
+          resolve(canvas.toDataURL('image/jpeg', quality));
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  // ---------- Bilderkennung (client-seitig, TensorFlow.js + MobileNet) ----------
+  // Läuft komplett lokal im Browser, es wird kein Foto irgendwohin hochgeladen.
+  var mobilenetModel = null, modelLoadingPromise = null;
+  function loadScript(src){
+    return new Promise(function(resolve,reject){
+      var s = document.createElement('script');
+      s.src = src; s.onload = function(){ resolve(); }; s.onerror = function(){ reject(new Error('Skript konnte nicht geladen werden: '+src)); };
+      document.head.appendChild(s);
+    });
+  }
+  function ensureModel(){
+    if(mobilenetModel) return Promise.resolve(mobilenetModel);
+    if(modelLoadingPromise) return modelLoadingPromise;
+    elStatus.textContent = '🧠 KI-Modell wird geladen …';
+    modelLoadingPromise = loadScript('https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js')
+      .then(function(){ return loadScript('https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@2.1.1/dist/mobilenet.min.js'); })
+      .then(function(){ return mobilenet.load({ version:1, alpha:0.25 }); }) // kleine/schnelle Variante, gut für Mobilfunknetz
+      .then(function(model){ mobilenetModel = model; elStatus.textContent=''; return model; })
+      .catch(function(e){ elStatus.textContent=''; modelLoadingPromise=null; console.warn('KI-Modell konnte nicht geladen werden', e); throw e; });
+    return modelLoadingPromise;
+  }
+  function classifyMatches(collectionId, predictions){
+    var keywords = RECOGNITION_KEYWORDS[collectionId] || [];
+    for(var i=0;i<predictions.length;i++){
+      var label = predictions[i].className.toLowerCase();
+      for(var k=0;k<keywords.length;k++){
+        if(label.indexOf(keywords[k]) !== -1) return predictions[i];
+      }
+    }
+    return null;
+  }
+  function matchSpecies(collection, predictions){
+    for(var i=0;i<predictions.length;i++){
+      var label = predictions[i].className.toLowerCase();
+      for(var s=0;s<collection.species.length;s++){
+        var species = collection.species[s];
+        for(var k=0;k<species.keywords.length;k++){
+          if(label.indexOf(species.keywords[k]) !== -1) return species;
+        }
+      }
+    }
+    return null;
+  }
+  function classifyImage(dataUrl){
+    return ensureModel().then(function(model){
+      return new Promise(function(resolve,reject){
+        var img = new Image();
+        img.onload = function(){
+          elStatus.textContent = '🔍 Foto wird analysiert …';
+          model.classify(img).then(function(predictions){
+            elStatus.textContent = '';
+            resolve(predictions);
+          }).catch(function(e){ elStatus.textContent=''; reject(e); });
+        };
+        img.onerror = function(){ reject(new Error('Bild konnte nicht geladen werden')); };
+        img.src = dataUrl;
+      });
+    });
+  }
+
+  var photoListEl = document.getElementById('photo-list');
+  function renderPhotoSection(){
+    photoListEl.innerHTML = '';
+    PHOTO_COLLECTIONS.forEach(function(c){
+      var prog = state.photoProgress[c.id] || { count:0, bonusAwarded:false };
+      var card = document.createElement('div');
+      card.className = 'photo-card';
+      var descHtml, extraHtml = '';
+      if(c.species){
+        var found = state.speciesFound[c.id] || {};
+        var tickedCount = c.species.filter(function(s){ return found[s.id]; }).length;
+        descHtml = tickedCount+' / '+c.species.length+' Arten bestimmt'+(prog.bonusAwarded?' · komplett! ✅':'');
+        extraHtml = '<div class="bird-checklist">' + c.species.map(function(s){
+          var done = !!found[s.id];
+          return '<span class="bird-chip'+(done?' done':'')+'">'+(done?'✅':'❓')+' '+s.name+'</span>';
+        }).join('') + '</div>';
+      } else {
+        descHtml = Math.min(prog.count,c.target)+' / '+c.target+' fotografiert'+(prog.bonusAwarded?' · Sammlung komplett! ✅':'');
+      }
+      card.innerHTML =
+        '<div class="photo-card-head">'+
+          '<div class="q-icon">'+c.icon+'</div>'+
+          '<div class="q-info"><div class="q-name">'+c.name+'</div>'+
+          '<div class="q-desc">'+descHtml+'</div></div>'+
+          '<button class="photo-btn" data-collection="'+c.id+'" title="Foto machen">📷</button>'+
+        '</div>'+
+        extraHtml+
+        '<div class="thumb-row" id="thumbs-'+c.id+'"></div>';
+      photoListEl.appendChild(card);
+      getPhotosForCollection(c.id).then(function(photos){
+        var row = document.getElementById('thumbs-'+c.id);
+        if(row) row.innerHTML = photos.slice(-8).map(function(p){ return '<img class="thumb" src="'+p.dataUrl+'">'; }).join('');
+      }).catch(function(){ /* IndexedDB evtl. nicht verfügbar */ });
+    });
+  }
+
+  var pendingPhotoCollection = null;
+  var photoFileInput = document.getElementById('photo-file-input');
+  photoListEl.addEventListener('click', function(e){
+    var btn = e.target.closest('.photo-btn');
+    if(!btn) return;
+    pendingPhotoCollection = btn.dataset.collection;
+    photoFileInput.click();
+  });
+  photoFileInput.addEventListener('change', function(e){
+    var file = e.target.files[0];
+    photoFileInput.value = '';
+    if(!file || !pendingPhotoCollection) return;
+    var collectionId = pendingPhotoCollection;
+    var c = PHOTO_COLLECTIONS.filter(function(x){ return x.id===collectionId; })[0];
+    var resizedDataUrl = null;
+    resizeImageFile(file, 480, 0.72).then(function(dataUrl){
+      resizedDataUrl = dataUrl;
+      return savePhoto(collectionId, dataUrl);
+    }).then(function(){
+      // KI-Bewertung: bewertet nur, blockiert aber nie das Zählen des Fotos.
+      return classifyImage(resizedDataUrl).catch(function(){ return null; });
+    }).then(function(predictions){
+      var prog = state.photoProgress[collectionId] || { count:0, bonusAwarded:false };
+      prog.count += 1;
+
+      if(c.species){
+        var found = state.speciesFound[collectionId] || (state.speciesFound[collectionId] = {});
+        var species = predictions ? matchSpecies(c, predictions) : null;
+        var xpGain, msg;
+        if(species && !found[species.id]){
+          found[species.id] = true;
+          xpGain = SPECIES_XP;
+          msg = '✅ '+species.name+' erkannt — neue Art im Bestimmungsbuch! +'+xpGain+' XP';
+        } else if(species){
+          xpGain = 10;
+          msg = '📸 '+species.name+' fotografiert (schon bestimmt) +'+xpGain+' XP';
+        } else {
+          xpGain = 12;
+          msg = c.icon+' Foto gespeichert (Art nicht sicher erkannt) +'+xpGain+' XP';
+        }
+        state.xp += xpGain;
+        showToast(msg);
+        var allDone = c.species.every(function(s){ return found[s.id]; });
+        if(allDone && !prog.bonusAwarded){
+          prog.bonusAwarded = true;
+          state.xp += c.xpBonus;
+          showToast('🏆 Alle Arten im '+c.name+'! +'+c.xpBonus+' XP');
+        }
+      } else {
+        var matchPred = predictions ? classifyMatches(collectionId, predictions) : null;
+        var xpGain2, msg2;
+        if(matchPred){
+          xpGain2 = c.xpPerPhoto;
+          msg2 = '✅ KI erkennt: '+matchPred.className.split(',')[0]+' — Treffer! +'+xpGain2+' XP';
+        } else if(predictions && predictions[0]){
+          xpGain2 = Math.round(c.xpPerPhoto/2);
+          msg2 = '🤔 KI vermutet eher "'+predictions[0].className.split(',')[0]+'" — zählt trotzdem, +'+xpGain2+' XP';
+        } else {
+          xpGain2 = c.xpPerPhoto;
+          msg2 = c.icon+' Foto gespeichert! +'+xpGain2+' XP';
+        }
+        state.xp += xpGain2;
+        showToast(msg2+' ('+Math.min(prog.count,c.target)+'/'+c.target+')');
+        if(prog.count >= c.target && !prog.bonusAwarded){
+          prog.bonusAwarded = true;
+          state.xp += c.xpBonus;
+          showToast('🏆 Sammlung "'+c.name+'" komplett! +'+c.xpBonus+' XP');
+        }
+      }
+      state.photoProgress[collectionId] = prog;
+      updateHUD(); renderPhotoSection(); saveState();
+    }).catch(function(err){
+      console.warn('Foto konnte nicht gespeichert werden', err);
+      showToast('⚠️ Foto konnte nicht gespeichert werden');
+    });
+  });
+
+  // ---------- Charakter-Editor (Pixelgrafik) ----------
+  var currentPaintColor = PALETTE[0];
+  var isPainting = false;
+  var strokeDirty = false;
+  function buildPixelGrid(){
+    var grid = document.getElementById('pixel-grid');
+    grid.style.gridTemplateColumns = 'repeat('+GRID_SIZE+', 1fr)';
+    grid.style.gridTemplateRows = 'repeat('+GRID_SIZE+', 1fr)';
+    grid.innerHTML = '';
+    for(var i=0;i<GRID_SIZE*GRID_SIZE;i++){
+      var cell = document.createElement('div');
+      cell.className = 'pixel-cell';
+      cell.dataset.index = i;
+      grid.appendChild(cell);
+    }
+    grid.addEventListener('pointerdown', function(e){ isPainting=true; paintFromEvent(e); e.preventDefault(); });
+    grid.addEventListener('pointermove', function(e){ if(isPainting){ paintFromEvent(e); e.preventDefault(); } });
+    window.addEventListener('pointerup', function(){
+      if(isPainting && strokeDirty){
+        strokeDirty = false;
+        invalidateCharacterCache();
+        playerMarker.setIcon(makeAvatarIcon(lastEmoji));
+        applyHeadingToMarker();
+        updateHUD();
+        saveState();
+      }
+      isPainting = false;
+    });
+  }
+  function paintFromEvent(e){
+    var el = document.elementFromPoint(e.clientX, e.clientY);
+    if(!el || !el.classList.contains('pixel-cell')) return;
+    var idx = parseInt(el.dataset.index, 10);
+    var x = idx % GRID_SIZE, y = Math.floor(idx/GRID_SIZE);
+    state.character.pixels[idx] = currentPaintColor;
+    if(document.getElementById('symmetry-toggle').checked){
+      state.character.pixels[y*GRID_SIZE + (GRID_SIZE-1-x)] = currentPaintColor;
+    }
+    strokeDirty = true;
+    refreshPixelGridView();
+  }
+  function refreshPixelGridView(){
+    var cells = document.querySelectorAll('#pixel-grid .pixel-cell');
+    cells.forEach(function(cell){
+      var idx = parseInt(cell.dataset.index, 10);
+      cell.style.background = state.character.pixels[idx] || 'transparent';
+    });
+    invalidateCharacterCache();
+    var img = document.getElementById('char-preview-img');
+    if(img) img.src = getCharacterDataURL(8);
+  }
+  function renderTemplateThumbnails(){
+    Object.keys(CHARACTER_TEMPLATES).forEach(function(key){
+      var canvas = document.createElement('canvas');
+      canvas.width = GRID_SIZE*4; canvas.height = GRID_SIZE*4;
+      var ctx = canvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+      CHARACTER_TEMPLATES[key].forEach(function(color,i){
+        if(!color) return;
+        var x=i%GRID_SIZE, y=Math.floor(i/GRID_SIZE);
+        ctx.fillStyle = color;
+        ctx.fillRect(x*4,y*4,4,4);
+      });
+      var img = document.getElementById('template-thumb-'+key);
+      if(img) img.src = canvas.toDataURL();
+    });
+  }
+  document.querySelectorAll('.template-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var key = btn.dataset.template;
+      if(!CHARACTER_TEMPLATES[key]) return;
+      if(hasCustomCharacter() && !confirm('Aktuellen Charakter durch Vorlage ersetzen?')) return;
+      state.character.pixels = CHARACTER_TEMPLATES[key].slice();
+      refreshPixelGridView();
+      playerMarker.setIcon(makeAvatarIcon(lastEmoji));
+      applyHeadingToMarker();
+      updateHUD();
+      saveState();
+    });
+  });
+
+  function buildPalette(){
+    var row = document.getElementById('palette-row');
+    row.innerHTML = '';
+    PALETTE.forEach(function(color, i){
+      var sw = document.createElement('button');
+      sw.className = 'swatch'+(i===0?' selected':'');
+      sw.style.background = color;
+      sw.addEventListener('click', function(){
+        currentPaintColor = color;
+        row.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+        eraserBtn.classList.remove('selected');
+        sw.classList.add('selected');
+      });
+      row.appendChild(sw);
+    });
+    var eraserBtn = document.createElement('button');
+    eraserBtn.className = 'swatch checker-bg';
+    eraserBtn.title = 'Radiergummi';
+    eraserBtn.textContent = '✕';
+    eraserBtn.addEventListener('click', function(){
+      currentPaintColor = null;
+      row.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+      eraserBtn.classList.add('selected');
+    });
+    row.appendChild(eraserBtn);
+  }
+  document.getElementById('char-clear-btn').addEventListener('click', function(){
+    if(!confirm('Charakter wirklich leeren?')) return;
+    state.character.pixels = new Array(GRID_SIZE*GRID_SIZE).fill(null);
+    refreshPixelGridView();
+    playerMarker.setIcon(makeAvatarIcon(lastEmoji));
+    applyHeadingToMarker();
+    updateHUD();
+    saveState();
+  });
+  document.getElementById('char-save-btn').addEventListener('click', function(){
+    invalidateCharacterCache();
+    playerMarker.setIcon(makeAvatarIcon(lastEmoji));
+    applyHeadingToMarker();
+    updateHUD();
+    saveState();
+    showToast('🎨 Charakter gespeichert!');
+  });
+
+  // ---------- Inventar ----------
+  function renderInventory(){
+    var list = document.getElementById('inventory-list');
+    list.innerHTML = '';
+    var any = false;
+    ITEM_CATEGORIES.forEach(function(cat){
+      var owned = ITEM_DEFINITIONS.filter(function(d){ return d.category===cat.id && (state.inventory[d.id]||0) > 0; });
+      if(owned.length===0) return;
+      any = true;
+      var header = document.createElement('li');
+      header.className = 'inv-category-header';
+      header.textContent = cat.icon+' '+cat.name;
+      list.appendChild(header);
+      owned.forEach(function(def){
+        var count = state.inventory[def.id];
+        var li = document.createElement('li');
+        li.innerHTML = '<div class="q-icon">'+def.icon+'</div><div class="q-info"><div class="q-name">'+def.name+(count>1?' ×'+count:'')+'</div><div class="q-desc">'+def.desc+'</div></div>';
+        list.appendChild(li);
+      });
+    });
+    if(!any){
+      list.innerHTML = '<li style="opacity:.7;padding:10px;">Noch leer — erkunde weiter, vielleicht liegt irgendwo etwas versteckt!</li>';
+    }
+  }
+
+  // ---------- Offline-Karte (Kachel-Vorab-Download) ----------
+  var OFFLINE_TILE_CACHE = 'entdecker-tiles-v1';
+  var OFFLINE_MIN_ZOOM = 13;
+  var OFFLINE_MAX_ZOOM_CAP = 18;
+  var OFFLINE_TILE_BUDGET = 6000; // grobe Obergrenze, damit ein großer Radius nicht explodiert
+  var OFFLINE_AVG_TILE_KB = 18;
+  var offlineDownloadCancelled = false;
+  var offlineCenterMarker = null, offlineCenterCircle = null;
+
+  function lngToTileX(lng, z){ return Math.floor((lng+180)/360*Math.pow(2,z)); }
+  function latToTileY(lat, z){
+    var r = lat*Math.PI/180;
+    return Math.floor((1 - Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*Math.pow(2,z));
+  }
+  function tileUrl(z,x,y){
+    var subs = ['a','b','c'];
+    return 'https://'+subs[(x+y+z)%subs.length]+'.tile.openstreetmap.org/'+z+'/'+x+'/'+y+'.png';
+  }
+  function tileRangeForZoom(center, radiusKm, z){
+    var latDelta = radiusKm/111.32;
+    var lngDelta = radiusKm/(111.32*Math.cos(center.lat*Math.PI/180));
+    return {
+      xMin: lngToTileX(center.lng-lngDelta, z), xMax: lngToTileX(center.lng+lngDelta, z),
+      yMin: latToTileY(center.lat+latDelta, z), yMax: latToTileY(center.lat-latDelta, z)
+    };
+  }
+  function countTilesForZoom(center, radiusKm, z){
+    var r = tileRangeForZoom(center, radiusKm, z);
+    return Math.max(0, r.xMax-r.xMin+1) * Math.max(0, r.yMax-r.yMin+1);
+  }
+  // Wählt automatisch die höchste Zoomstufe, die im Kachel-Budget bleibt — bei großem
+  // Radius werden also weniger Zoomstufen (weniger Detail) geladen, bei kleinem Radius mehr.
+  function planOfflineZooms(center, radiusKm){
+    var zooms = [], total = 0;
+    for(var z=OFFLINE_MIN_ZOOM; z<=OFFLINE_MAX_ZOOM_CAP; z++){
+      var count = countTilesForZoom(center, radiusKm, z);
+      if(total+count > OFFLINE_TILE_BUDGET && zooms.length>0) break;
+      zooms.push(z);
+      total += count;
+    }
+    return { zooms:zooms, total:total };
+  }
+  function computeTileList(center, radiusKm, zooms){
+    var urls = [];
+    zooms.forEach(function(z){
+      var r = tileRangeForZoom(center, radiusKm, z);
+      for(var x=r.xMin; x<=r.xMax; x++){
+        for(var y=r.yMin; y<=r.yMax; y++){ urls.push(tileUrl(z,x,y)); }
+      }
+    });
+    return urls;
+  }
+  function updateOfflineEstimate(){
+    var el = document.getElementById('offline-estimate');
+    if(!el) return;
+    var c = state.offlineArea.center;
+    if(!c){ el.textContent = 'Noch kein Zentrum gewählt.'; return; }
+    var plan = planOfflineZooms(c, state.offlineArea.radiusKm);
+    var mb = Math.round(plan.total*OFFLINE_AVG_TILE_KB/1024);
+    el.textContent = '≈ '+plan.total+' Kacheln (~'+mb+' MB, grobe Schätzung) · Zoomstufen '+plan.zooms[0]+'–'+plan.zooms[plan.zooms.length-1];
+  }
+  function updateOfflineProgress(done, total, finished){
+    var fill = document.getElementById('offline-progress-fill');
+    var text = document.getElementById('offline-progress-text');
+    var pct = total>0 ? Math.round(done/total*100) : 0;
+    if(fill) fill.style.width = pct+'%';
+    if(text) text.textContent = done+' / '+total+' Kacheln ('+pct+'%)'+(finished?' — fertig':'');
+  }
+  function renderOfflineStatus(){
+    var el = document.getElementById('offline-status-line');
+    if(!el) return;
+    var a = state.offlineArea;
+    if(a.downloadedAt){
+      el.textContent = '🗺️ Gespeichert: '+a.radiusKm+' km Radius, '+a.tileCount+' Kacheln (Stand '+new Date(a.downloadedAt).toLocaleDateString('de-DE')+')';
+    } else {
+      el.textContent = 'Noch keine Offline-Karte gespeichert.';
+    }
+  }
+  function drawOfflineCenterOverlay(){
+    if(offlineCenterMarker){ map.removeLayer(offlineCenterMarker); offlineCenterMarker=null; }
+    if(offlineCenterCircle){ map.removeLayer(offlineCenterCircle); offlineCenterCircle=null; }
+    var c = state.offlineArea.center;
+    if(!c || !parentPlacementMode) return;
+    offlineCenterMarker = L.marker([c.lat,c.lng], { icon: L.divIcon({ className:'', html:'<div style="font-size:22px;">📍</div>', iconSize:[24,24], iconAnchor:[12,24] }) }).addTo(map);
+    offlineCenterCircle = L.circle([c.lat,c.lng], { radius: state.offlineArea.radiusKm*1000, color:'#D4A73D', weight:2, fillOpacity:0.08 }).addTo(map);
+  }
+  function setOfflineCenter(lat,lng){
+    state.offlineArea.center = { lat:lat, lng:lng };
+    saveState();
+    parentPlacementMode = 'item';
+    document.getElementById('offline-center-status').textContent = 'Zentrum gesetzt ✓';
+    drawOfflineCenterOverlay();
+    updateOfflineEstimate();
+  }
+  function downloadOfflineArea(center, radiusKm){
+    if(!('caches' in window)) return Promise.reject(new Error('Cache Storage nicht verfügbar'));
+    var plan = planOfflineZooms(center, radiusKm);
+    var urls = computeTileList(center, radiusKm, plan.zooms);
+    var total = urls.length, done = 0, failed = 0;
+    offlineDownloadCancelled = false;
+    updateOfflineProgress(0, total, false);
+    return caches.open(OFFLINE_TILE_CACHE).then(function(cache){
+      var CONCURRENCY = 4;
+      var idx = 0;
+      function worker(){
+        if(offlineDownloadCancelled || idx >= urls.length) return Promise.resolve();
+        var url = urls[idx++];
+        return cache.match(url).then(function(existing){
+          if(existing){ done++; updateOfflineProgress(done,total,false); return worker(); }
+          return fetch(url).then(function(res){
+            if(res && (res.ok || res.type==='opaque')) return cache.put(url, res);
+          }).catch(function(){ failed++; }).then(function(){
+            done++; updateOfflineProgress(done,total,false);
+            return worker();
+          });
+        });
+      }
+      var workers = [];
+      for(var i=0;i<CONCURRENCY;i++) workers.push(worker());
+      return Promise.all(workers).then(function(){
+        updateOfflineProgress(done,total,true);
+        return { total:total, done:done, failed:failed };
+      });
+    });
+  }
+  function deleteOfflineArea(){
+    return caches.delete(OFFLINE_TILE_CACHE).then(function(){
+      state.offlineArea = { center:null, radiusKm:state.offlineArea.radiusKm, tileCount:0, downloadedAt:null };
+      saveState();
+      renderOfflineStatus();
+      updateOfflineEstimate();
+      drawOfflineCenterOverlay();
+    });
+  }
+  document.getElementById('offline-center-btn').addEventListener('click', function(){
+    parentPlacementMode = 'offline-center';
+    document.getElementById('offline-center-status').textContent = 'Auf die Karte tippen …';
+  });
+  document.getElementById('offline-radius-slider').addEventListener('input', function(e){
+    var v = parseInt(e.target.value, 10);
+    state.offlineArea.radiusKm = v;
+    document.getElementById('offline-radius-value').textContent = v;
+    if(offlineCenterCircle) offlineCenterCircle.setRadius(v*1000);
+    updateOfflineEstimate();
+    saveState();
+  });
+  document.getElementById('offline-download-btn').addEventListener('click', function(){
+    var c = state.offlineArea.center;
+    if(!c){ showToast('⚠️ Erst ein Zentrum auf der Karte wählen'); return; }
+    var downloadBtn = document.getElementById('offline-download-btn');
+    downloadBtn.disabled = true;
+    document.getElementById('offline-cancel-btn').style.display = '';
+    document.getElementById('offline-progress-track').style.display = 'block';
+    downloadOfflineArea(c, state.offlineArea.radiusKm).then(function(result){
+      downloadBtn.disabled = false;
+      document.getElementById('offline-cancel-btn').style.display = 'none';
+      state.offlineArea.tileCount = result.done;
+      state.offlineArea.downloadedAt = Date.now();
+      saveState();
+      renderOfflineStatus();
+      showToast('✅ Offline-Karte gespeichert ('+result.done+' Kacheln'+(result.failed?', '+result.failed+' fehlgeschlagen':'')+')');
+    }).catch(function(e){
+      downloadBtn.disabled = false;
+      document.getElementById('offline-cancel-btn').style.display = 'none';
+      console.warn('Offline-Download fehlgeschlagen', e);
+      showToast('⚠️ Offline-Download fehlgeschlagen');
+    });
+  });
+  document.getElementById('offline-cancel-btn').addEventListener('click', function(){
+    offlineDownloadCancelled = true;
+  });
+  document.getElementById('offline-delete-btn').addEventListener('click', function(){
+    if(!confirm('Offline-Karte wirklich löschen?')) return;
+    deleteOfflineArea().then(function(){ showToast('🗑️ Offline-Karte gelöscht'); });
+  });
+
+  // ---------- Vom Kind eingesammelte, von Eltern versteckte Gegenstände ----------
+  function checkItemPickup(lat,lng){
+    var changed = false;
+    state.placedItems.forEach(function(it){
+      if(it.collected) return;
+      if(haversine(lat,lng,it.lat,it.lng) <= ITEM_PICKUP_RADIUS){
+        it.collected = true;
+        var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===it.itemDefId; })[0];
+        state.inventory[it.itemDefId] = (state.inventory[it.itemDefId]||0) + 1;
+        showToast((def?def.icon:'🎁')+' '+(def?def.name:'Gegenstand')+' gefunden!');
+        changed = true;
+        if(itemMarkerRefs[it.id]){ itemMarkersLayer.removeLayer(itemMarkerRefs[it.id]); delete itemMarkerRefs[it.id]; }
+      }
+    });
+    if(changed){ renderInventory(); renderPlacedItemsList(); saveState(); }
+  }
+
+  // ---------- Quest-Nachrichten (Modal) ----------
+  function showQuestMessage(title, text){
+    document.getElementById('quest-modal-title').textContent = title;
+    document.getElementById('quest-modal-text').textContent = text || '';
+    document.getElementById('quest-message-modal').style.display = 'flex';
+  }
+  document.getElementById('quest-modal-close-btn').addEventListener('click', function(){
+    document.getElementById('quest-message-modal').style.display = 'none';
+  });
+
+  // ---------- Quest-Fortschritt (aktive Quest läuft zusätzlich zum freien Erkunden) ----------
+  function updateQuestIndicator(){
+    var el = document.getElementById('quest-indicator');
+    if(!state.activeQuestId){ el.style.display = 'none'; return; }
+    var quest = state.quests.filter(function(q){ return q.id===state.activeQuestId; })[0];
+    if(!quest){ el.style.display = 'none'; return; }
+    var progress = state.questProgress[quest.id] || { waypointsReached:[] };
+    el.style.display = 'inline-block';
+    document.getElementById('quest-indicator-text').textContent = quest.name+' · '+progress.waypointsReached.length+'/'+quest.waypoints.length+' Punkte';
+  }
+  function checkQuestProgress(lat,lng){
+    if(!state.activeQuestId) return;
+    var quest = state.quests.filter(function(q){ return q.id===state.activeQuestId; })[0];
+    if(!quest) return;
+    var progress = state.questProgress[quest.id];
+    if(!progress) progress = state.questProgress[quest.id] = { started:false, waypointsReached:[], completedAt:null };
+    var changed = false;
+
+    if(!progress.started){
+      progress.started = true;
+      changed = true;
+      showQuestMessage(quest.name, quest.introText || 'Die Quest hat begonnen!');
+    }
+
+    quest.waypoints.forEach(function(wp){
+      if(progress.waypointsReached.indexOf(wp.id) !== -1) return;
+      if(haversine(lat,lng,wp.lat,wp.lng) <= (wp.radius||20)){
+        progress.waypointsReached.push(wp.id);
+        changed = true;
+        showQuestMessage(quest.name, wp.message);
+      }
+    });
+    quest.items.forEach(function(it){
+      if(it.collected) return;
+      if(haversine(lat,lng,it.lat,it.lng) <= ITEM_PICKUP_RADIUS){
+        it.collected = true;
+        var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===it.itemDefId; })[0];
+        state.inventory[it.itemDefId] = (state.inventory[it.itemDefId]||0) + 1;
+        showToast((def?def.icon:'🎁')+' '+(def?def.name:'Gegenstand')+' gefunden!');
+        changed = true;
+      }
+    });
+
+    var allWaypointsDone = quest.waypoints.every(function(wp){ return progress.waypointsReached.indexOf(wp.id)!==-1; });
+    var allItemsDone = quest.items.every(function(it){ return it.collected; });
+    if(allWaypointsDone && allItemsDone && !progress.completedAt){
+      progress.completedAt = Date.now();
+      changed = true;
+      showQuestMessage('🏆 '+quest.name, 'Quest abgeschlossen! Gut gemacht, Entdecker!');
+    }
+
+    if(changed){ saveState(); renderInventory(); updateQuestIndicator(); }
+  }
+  function activateQuest(id){
+    state.activeQuestId = id;
+    if(!state.questProgress[id]) state.questProgress[id] = { started:false, waypointsReached:[], completedAt:null };
+    saveState();
+    updateQuestIndicator();
+  }
+  function deactivateQuest(){
+    state.activeQuestId = null;
+    saveState();
+    updateQuestIndicator();
+  }
+
+  // ---------- Eltern-Bereich: Quest-Baukasten ----------
+  var questDraft = null;
+  var questBuilderMode = null; // null | 'waypoint' | 'item'
+  var questArmedItemId = ITEM_DEFINITIONS[0].id;
+  var questDraftLayer = L.layerGroup();
+
+  function refreshQuestDraftMarkers(){
+    questDraftLayer.clearLayers();
+    if(!questDraft) return;
+    questDraft.waypoints.forEach(function(wp, i){
+      L.marker([wp.lat,wp.lng], { icon: L.divIcon({ className:'', html:'<div class="item-marker-inner">'+(i+1)+'</div>', iconSize:[28,28], iconAnchor:[14,14] }) }).addTo(questDraftLayer);
+    });
+    questDraft.items.forEach(function(it){
+      var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===it.itemDefId; })[0];
+      L.marker([it.lat,it.lng], { icon: L.divIcon({ className:'', html:'<div class="item-marker-inner">'+(def?def.icon:'❔')+'</div>', iconSize:[28,28], iconAnchor:[14,14] }) }).addTo(questDraftLayer);
+    });
+  }
+  function renderQuestWaypointList(){
+    var list = document.getElementById('quest-waypoint-list');
+    list.innerHTML = '';
+    questDraft.waypoints.forEach(function(wp, i){
+      var li = document.createElement('li');
+      li.innerHTML = '<div class="q-icon">📍</div><div class="q-info"><div class="q-name">Punkt '+(i+1)+'</div><div class="q-desc">'+wp.message+'</div></div><button class="reset-btn quest-wp-remove" data-idx="'+i+'">entfernen</button>';
+      list.appendChild(li);
+    });
+    refreshQuestDraftMarkers();
+  }
+  function renderQuestItemList(){
+    var list = document.getElementById('quest-item-list');
+    list.innerHTML = '';
+    questDraft.items.forEach(function(it, i){
+      var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===it.itemDefId; })[0];
+      var li = document.createElement('li');
+      li.innerHTML = '<div class="q-icon">'+(def?def.icon:'❔')+'</div><div class="q-info"><div class="q-name">'+(def?def.name:'?')+'</div></div><button class="reset-btn quest-item-remove" data-idx="'+i+'">entfernen</button>';
+      list.appendChild(li);
+    });
+    refreshQuestDraftMarkers();
+  }
+  function buildQuestItemPicker(){
+    var row = document.getElementById('quest-item-picker-row');
+    row.innerHTML = '';
+    ITEM_CATEGORIES.forEach(function(cat){
+      var catItems = ITEM_DEFINITIONS.filter(function(d){ return d.category===cat.id; });
+      if(catItems.length===0) return;
+      var label = document.createElement('div');
+      label.className = 'item-picker-cat-label';
+      label.textContent = cat.icon+' '+cat.name;
+      row.appendChild(label);
+      var subRow = document.createElement('div');
+      subRow.className = 'palette-row';
+      catItems.forEach(function(def){
+        var btn = document.createElement('button');
+        btn.className = 'swatch'+(def.id===questArmedItemId?' selected':'');
+        btn.textContent = def.icon;
+        btn.title = def.name;
+        btn.addEventListener('click', function(){
+          questArmedItemId = def.id;
+          row.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+          btn.classList.add('selected');
+        });
+        subRow.appendChild(btn);
+      });
+      row.appendChild(subRow);
+    });
+  }
+  function renderQuestAdminList(){
+    var list = document.getElementById('quest-list-admin');
+    list.innerHTML = '';
+    if(state.quests.length===0){
+      list.innerHTML = '<li style="opacity:.7;padding:8px;">Noch keine Quest erstellt.</li>';
+      return;
+    }
+    state.quests.forEach(function(q){
+      var active = state.activeQuestId === q.id;
+      var li = document.createElement('li');
+      if(active) li.classList.add('done');
+      li.innerHTML =
+        '<div class="q-icon">🗺️</div>'+
+        '<div class="q-info"><div class="q-name">'+q.name+'</div><div class="q-desc">'+q.waypoints.length+' Punkte · '+q.items.length+' Gegenstände'+(active?' · aktiv ✅':'')+'</div></div>'+
+        '<button class="reset-btn quest-toggle-btn" data-id="'+q.id+'">'+(active?'Beenden':'Starten')+'</button>'+
+        '<button class="reset-btn quest-delete-btn" data-id="'+q.id+'">🗑️</button>';
+      list.appendChild(li);
+    });
+  }
+  function openQuestEditor(){
+    questDraft = { id:'quest_'+Date.now(), name:'', introText:'', waypoints:[], items:[] };
+    questBuilderMode = null;
+    document.getElementById('quest-name-input').value = '';
+    document.getElementById('quest-intro-input').value = '';
+    document.getElementById('waypoint-message-input').value = '';
+    buildQuestItemPicker();
+    renderQuestWaypointList();
+    renderQuestItemList();
+    questDraftLayer.addTo(map);
+    document.getElementById('quest-builder-list-view').style.display = 'none';
+    document.getElementById('quest-builder-edit-view').style.display = 'block';
+  }
+  function closeQuestEditor(){
+    questDraft = null;
+    questBuilderMode = null;
+    questDraftLayer.clearLayers();
+    map.removeLayer(questDraftLayer);
+    document.getElementById('quest-builder-edit-view').style.display = 'none';
+    document.getElementById('quest-builder-list-view').style.display = 'block';
+  }
+  document.getElementById('quest-new-btn').addEventListener('click', openQuestEditor);
+  document.getElementById('quest-cancel-btn').addEventListener('click', closeQuestEditor);
+  document.getElementById('waypoint-place-btn').addEventListener('click', function(){
+    var msg = document.getElementById('waypoint-message-input').value.trim();
+    if(!msg){ showToast('⚠️ Erst eine Nachricht eingeben'); return; }
+    questBuilderMode = 'waypoint';
+    showToast('📍 Auf die Karte tippen, um den Punkt zu setzen');
+  });
+  document.getElementById('quest-item-place-btn').addEventListener('click', function(){
+    questBuilderMode = 'item';
+    showToast('📍 Auf die Karte tippen, um den Gegenstand zu platzieren');
+  });
+  document.getElementById('quest-waypoint-list').addEventListener('click', function(e){
+    var btn = e.target.closest('.quest-wp-remove');
+    if(!btn) return;
+    questDraft.waypoints.splice(parseInt(btn.dataset.idx,10), 1);
+    renderQuestWaypointList();
+  });
+  document.getElementById('quest-item-list').addEventListener('click', function(e){
+    var btn = e.target.closest('.quest-item-remove');
+    if(!btn) return;
+    questDraft.items.splice(parseInt(btn.dataset.idx,10), 1);
+    renderQuestItemList();
+  });
+  document.getElementById('quest-save-btn').addEventListener('click', function(){
+    var name = document.getElementById('quest-name-input').value.trim();
+    if(!name){ showToast('⚠️ Bitte einen Namen eingeben'); return; }
+    questDraft.name = name;
+    questDraft.introText = document.getElementById('quest-intro-input').value.trim();
+    questDraft.createdAt = Date.now();
+    state.quests.push(questDraft);
+    state.questProgress[questDraft.id] = { started:false, waypointsReached:[], completedAt:null };
+    saveState();
+    var savedId = questDraft.id;
+    closeQuestEditor();
+    renderQuestAdminList();
+    showToast('✅ Quest "'+name+'" gespeichert!');
+  });
+  document.getElementById('quest-list-admin').addEventListener('click', function(e){
+    var toggleBtn = e.target.closest('.quest-toggle-btn');
+    var delBtn = e.target.closest('.quest-delete-btn');
+    if(toggleBtn){
+      var id = toggleBtn.dataset.id;
+      if(state.activeQuestId === id){ deactivateQuest(); } else { activateQuest(id); }
+      renderQuestAdminList();
+    }
+    if(delBtn){
+      var id2 = delBtn.dataset.id;
+      if(!confirm('Quest wirklich löschen?')) return;
+      state.quests = state.quests.filter(function(q){ return q.id!==id2; });
+      delete state.questProgress[id2];
+      if(state.activeQuestId===id2) deactivateQuest();
+      saveState();
+      renderQuestAdminList();
+    }
+  });
+
+  // ---------- Eltern-Bereich: Ausrüstung auf der Karte platzieren ----------
+  // Hinweis: Die PIN ist ein einfacher, unverschlüsselter Schutz gegen "aus Versehen
+  // reintappen" — keine echte Sicherheit gegen jemanden, der die Gerätedaten ausliest.
+  var parentPanel = document.getElementById('parent-panel');
+  var parentPlacementMode = false;
+  var armedItemId = ITEM_DEFINITIONS[0].id;
+  var itemMarkersLayer = L.layerGroup();
+  var itemMarkerRefs = {};
+
+  function addItemMarker(entry){
+    var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===entry.itemDefId; })[0];
+    var marker = L.marker([entry.lat, entry.lng], {
+      icon: L.divIcon({ className:'item-marker', html:'<div class="item-marker-inner">'+(def?def.icon:'❔')+'</div>', iconSize:[30,30], iconAnchor:[15,15] })
+    });
+    itemMarkerRefs[entry.id] = marker;
+    itemMarkersLayer.addLayer(marker);
+  }
+  function showItemMarkersOnMap(){
+    itemMarkersLayer.clearLayers();
+    itemMarkerRefs = {};
+    state.placedItems.filter(function(it){ return !it.collected; }).forEach(addItemMarker);
+    itemMarkersLayer.addTo(map);
+  }
+  function hideItemMarkersOnMap(){
+    map.removeLayer(itemMarkersLayer);
+  }
+  function placeItemAt(lat,lng){
+    var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===armedItemId; })[0];
+    var entry = { id:'item_'+Date.now(), itemDefId:armedItemId, lat:lat, lng:lng, collected:false };
+    state.placedItems.push(entry);
+    saveState();
+    addItemMarker(entry);
+    renderPlacedItemsList();
+    showToast('📍 '+(def?def.icon+' '+def.name:'Gegenstand')+' versteckt!');
+  }
+  function buildItemPicker(){
+    var row = document.getElementById('item-picker-row');
+    row.innerHTML = '';
+    ITEM_CATEGORIES.forEach(function(cat){
+      var catItems = ITEM_DEFINITIONS.filter(function(d){ return d.category===cat.id; });
+      if(catItems.length===0) return;
+      var label = document.createElement('div');
+      label.className = 'item-picker-cat-label';
+      label.textContent = cat.icon+' '+cat.name;
+      row.appendChild(label);
+      var subRow = document.createElement('div');
+      subRow.className = 'palette-row';
+      catItems.forEach(function(def){
+        var btn = document.createElement('button');
+        btn.className = 'swatch'+(def.id===armedItemId?' selected':'');
+        btn.textContent = def.icon;
+        btn.title = def.name;
+        btn.addEventListener('click', function(){
+          armedItemId = def.id;
+          row.querySelectorAll('.swatch').forEach(function(s){ s.classList.remove('selected'); });
+          btn.classList.add('selected');
+          document.getElementById('placement-status').textContent = 'Ausgewählt: '+def.icon+' '+def.name+' — jetzt auf die Karte tippen';
+        });
+        subRow.appendChild(btn);
+      });
+      row.appendChild(subRow);
+    });
+    var first = ITEM_DEFINITIONS[0];
+    document.getElementById('placement-status').textContent = 'Ausgewählt: '+first.icon+' '+first.name+' — jetzt auf die Karte tippen';
+  }
+  function renderPlacedItemsList(){
+    var list = document.getElementById('placed-items-list');
+    list.innerHTML = '';
+    var open = state.placedItems.filter(function(it){ return !it.collected; });
+    if(open.length===0){
+      list.innerHTML = '<li style="opacity:.7;padding:8px;">Noch nichts versteckt.</li>';
+      return;
+    }
+    open.forEach(function(it){
+      var def = ITEM_DEFINITIONS.filter(function(d){ return d.id===it.itemDefId; })[0];
+      var li = document.createElement('li');
+      li.innerHTML =
+        '<div class="q-icon">'+(def?def.icon:'❔')+'</div>'+
+        '<div class="q-info"><div class="q-name">'+(def?def.name:'?')+'</div><div class="q-desc">noch nicht gefunden</div></div>'+
+        '<button class="reset-btn remove-item-btn" data-id="'+it.id+'">entfernen</button>';
+      list.appendChild(li);
+    });
+  }
+  document.getElementById('placed-items-list').addEventListener('click', function(e){
+    var btn = e.target.closest('.remove-item-btn');
+    if(!btn) return;
+    var id = btn.dataset.id;
+    state.placedItems = state.placedItems.filter(function(it){ return it.id!==id; });
+    if(itemMarkerRefs[id]){ itemMarkersLayer.removeLayer(itemMarkerRefs[id]); delete itemMarkerRefs[id]; }
+    saveState();
+    renderPlacedItemsList();
+  });
+
+  // ---------- Eltern-Bereich: PIN-Sperre ----------
+  var pinEntry = '';
+  var pinMode = 'verify';
+  var pinFirstEntry = '';
+  function buildPinPad(){
+    var pad = document.getElementById('pin-pad');
+    pad.innerHTML = '';
+    ['1','2','3','4','5','6','7','8','9','','0','⌫'].forEach(function(k){
+      var btn = document.createElement('button');
+      btn.className = 'pin-key';
+      btn.textContent = k;
+      if(k===''){ btn.style.visibility = 'hidden'; }
+      else { btn.addEventListener('click', function(){ handlePinKey(k); }); }
+      pad.appendChild(btn);
+    });
+  }
+  function updatePinDots(){
+    var dots = document.getElementById('pin-dots');
+    dots.innerHTML = '';
+    for(var i=0;i<4;i++){
+      var d = document.createElement('span');
+      d.className = 'pin-dot'+(i<pinEntry.length?' filled':'');
+      dots.appendChild(d);
+    }
+  }
+  function handlePinKey(k){
+    if(k==='⌫'){ pinEntry = pinEntry.slice(0,-1); }
+    else if(pinEntry.length<4){ pinEntry += k; }
+    updatePinDots();
+    if(pinEntry.length===4){ setTimeout(submitPin, 150); }
+  }
+  function submitPin(){
+    var instr = document.getElementById('pin-instruction');
+    if(!state.parentPin){
+      if(pinMode==='setup'){
+        pinFirstEntry = pinEntry; pinEntry = ''; pinMode = 'setup-confirm';
+        instr.textContent = 'PIN wiederholen';
+        updatePinDots();
+      } else {
+        if(pinEntry===pinFirstEntry){
+          state.parentPin = pinEntry; saveState();
+          openParentUnlocked();
+        } else {
+          instr.textContent = 'Stimmt nicht überein — neue PIN eingeben';
+          pinMode = 'setup'; pinEntry = ''; pinFirstEntry = '';
+          updatePinDots();
+        }
+      }
+    } else {
+      if(pinEntry===state.parentPin){
+        openParentUnlocked();
+      } else {
+        instr.textContent = 'Falsche PIN — nochmal versuchen';
+        pinEntry = ''; updatePinDots();
+      }
+    }
+  }
+  function openParentUnlocked(){
+    document.getElementById('parent-pin-view').style.display = 'none';
+    document.getElementById('parent-unlocked-view').style.display = 'block';
+    parentPlacementMode = 'item';
+    buildItemPicker();
+    renderPlacedItemsList();
+    showItemMarkersOnMap();
+    document.getElementById('compass-toggle').checked = !!state.treasureCompassEnabled;
+    document.getElementById('offline-radius-slider').value = state.offlineArea.radiusKm;
+    document.getElementById('offline-radius-value').textContent = state.offlineArea.radiusKm;
+    document.getElementById('offline-center-status').textContent = state.offlineArea.center ? 'Zentrum gesetzt ✓' : '';
+    renderOfflineStatus();
+    updateOfflineEstimate();
+    drawOfflineCenterOverlay();
+    closeQuestEditor();
+    renderQuestAdminList();
+    redrawFog();
+  }
+  function closeParentPanel(){
+    parentPanel.classList.remove('open');
+    parentPlacementMode = false;
+    hideItemMarkersOnMap();
+    if(offlineCenterMarker){ map.removeLayer(offlineCenterMarker); offlineCenterMarker=null; }
+    if(offlineCenterCircle){ map.removeLayer(offlineCenterCircle); offlineCenterCircle=null; }
+    closeQuestEditor();
+    redrawFog();
+  }
+  document.getElementById('parent-btn').addEventListener('click', function(){
+    questPanel.classList.remove('open');
+    pinEntry = '';
+    pinMode = state.parentPin ? 'verify' : 'setup';
+    document.getElementById('pin-instruction').textContent = state.parentPin ? 'PIN eingeben' : 'Neue PIN festlegen';
+    updatePinDots();
+    document.getElementById('parent-pin-view').style.display = 'block';
+    document.getElementById('parent-unlocked-view').style.display = 'none';
+    parentPanel.classList.add('open');
+  });
+  document.getElementById('parent-cancel-btn').addEventListener('click', closeParentPanel);
+  document.getElementById('parent-close-btn').addEventListener('click', closeParentPanel);
+  document.getElementById('parent-change-pin-btn').addEventListener('click', function(){
+    state.parentPin = null; saveState();
+    pinMode = 'setup'; pinEntry = '';
+    document.getElementById('pin-instruction').textContent = 'Neue PIN festlegen';
+    updatePinDots();
+    document.getElementById('parent-unlocked-view').style.display = 'none';
+    document.getElementById('parent-pin-view').style.display = 'block';
+  });
+
+  // ---------- Schatz-Kompass (optional, von Eltern aktivierbar) ----------
+  function updateTreasureCompass(lat,lng){
+    var widget = document.getElementById('treasure-compass');
+    if(!state.treasureCompassEnabled){ widget.style.display='none'; return; }
+    var open = state.placedItems.filter(function(it){ return !it.collected; });
+    if(open.length===0){ widget.style.display='none'; return; }
+    var nearest=null, nearestDist=Infinity;
+    open.forEach(function(it){
+      var d = haversine(lat,lng,it.lat,it.lng);
+      if(d<nearestDist){ nearestDist=d; nearest=it; }
+    });
+    var brng = bearingTo(lat,lng,nearest.lat,nearest.lng);
+    widget.style.display = 'flex';
+    document.getElementById('treasure-compass-arrow').style.transform = 'rotate('+brng+'deg)';
+    document.getElementById('treasure-compass-dist').textContent = nearestDist<1000 ? Math.round(nearestDist)+' m' : (nearestDist/1000).toFixed(1)+' km';
+  }
+  document.getElementById('compass-toggle').addEventListener('change', function(e){
+    state.treasureCompassEnabled = e.target.checked;
+    saveState();
+    var p = playerMarker.getLatLng();
+    updateTreasureCompass(p.lat, p.lng);
+  });
+
+  // ---------- Bewegung verarbeiten ----------
+  function handleNewPosition(lat,lng){
+    var key = cellKeyFor(lat,lng);
+    var isNewCell = !state.cells[key];
+    if(isNewCell){
+      state.cells[key] = { lat:lat, lng:lng };
+      state.xp += XP_PER_CELL;
+      checkStreak();
+    }
+    playerMarker.setLatLng([lat,lng]);
+    redrawFog();
+    updateHUD();
+    saveState();
+    checkEnvironment(lat,lng);
+    checkDailyQuest(lat,lng);
+    checkItemPickup(lat,lng);
+    checkQuestProgress(lat,lng);
+    updateTreasureCompass(lat,lng);
+  }
+
+  // ---------- GPS ----------
+  var firstFixDone = false;
+  function initGeolocation(){
+    if(!('geolocation' in navigator)){
+      elStatus.textContent = 'Kein GPS verfügbar – Testmodus per Kartenklick nutzen.';
+      return;
+    }
+    navigator.geolocation.watchPosition(
+      function(pos){
+        elStatus.textContent = '';
+        if(currentHeading===null && typeof pos.coords.heading==='number' && !isNaN(pos.coords.heading)){
+          currentHeading = pos.coords.heading;
+          applyHeadingToMarker();
+        }
+        handleNewPosition(pos.coords.latitude, pos.coords.longitude);
+        if(!firstFixDone){
+          firstFixDone = true;
+          map.setView([pos.coords.latitude,pos.coords.longitude], 17);
+        }
+      },
+      function(){
+        elStatus.textContent = 'GPS nicht verfügbar – Testmodus per Kartenklick nutzen.';
+      },
+      { enableHighAccuracy:true, maximumAge:5000, timeout:15000 }
+    );
+  }
+
+  // Testmodus: Kartenklick simuliert Bewegung — außer im Eltern-Platzierungsmodus
+  map.on('click', function(e){
+    if(questBuilderMode === 'waypoint' && questDraft){
+      var msg = document.getElementById('waypoint-message-input').value.trim();
+      questDraft.waypoints.push({ id:'wp_'+Date.now(), lat:e.latlng.lat, lng:e.latlng.lng, message:msg, radius:20 });
+      document.getElementById('waypoint-message-input').value = '';
+      questBuilderMode = null;
+      renderQuestWaypointList();
+      showToast('📍 Wegpunkt gesetzt!');
+    } else if(questBuilderMode === 'item' && questDraft){
+      questDraft.items.push({ id:'qi_'+Date.now(), itemDefId:questArmedItemId, lat:e.latlng.lat, lng:e.latlng.lng, collected:false });
+      questBuilderMode = null;
+      renderQuestItemList();
+      showToast('🎁 Quest-Gegenstand platziert!');
+    } else if(parentPlacementMode === 'offline-center'){ setOfflineCenter(e.latlng.lat, e.latlng.lng); }
+    else if(parentPlacementMode){ placeItemAt(e.latlng.lat, e.latlng.lng); }
+    else { handleNewPosition(e.latlng.lat, e.latlng.lng); }
+  });
+
+  document.getElementById('locate-btn').addEventListener('click', function(){
+    startHeadingTracking(); // auf iOS muss dies aus einer Nutzer-Geste heraus passieren
+    if(firstFixDone){ map.setView(playerMarker.getLatLng(), 17); }
+    else { initGeolocation(); }
+  });
+
+  document.getElementById('reset-btn').addEventListener('click', function(){
+    if(confirm('Erkundungs-Fortschritt wirklich zurücksetzen? (Charakter, Fotos, Inventar und versteckte Gegenstände bleiben erhalten)')){
+      state.cells = {};
+      state.discovered = {};
+      BIOMES.forEach(function(b){ state.discovered[b.id] = []; });
+      state.biomeMilestones = {};
+      BIOMES.forEach(function(b){ state.biomeMilestones[b.id] = []; });
+      state.poiCollected = {};
+      state.photoProgress = {};
+      PHOTO_COLLECTIONS.forEach(function(c){ state.photoProgress[c.id] = { count:0, bonusAwarded:false }; });
+      state.streak = { lastDate:null, count:0 };
+      state.dailyQuest = { date:null, questId:null, done:false };
+      state.xp = 0;
+      state.quests.forEach(function(q){
+        state.questProgress[q.id] = { started:false, waypointsReached:[], completedAt:null };
+        q.items.forEach(function(it){ it.collected = false; });
+      });
+      saveState();
+      redrawFog(); updateHUD(); renderQuestList(); renderTreasureList(); renderDailyQuest(); renderPhotoSection(); updateQuestIndicator();
+    }
+  });
+
+  // ---------- Start ----------
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').catch(function(e){
+      console.warn('Service-Worker-Registrierung fehlgeschlagen (Offline-Modus dann eingeschränkt)', e);
+    });
+  }
+  ensureDailyQuest().then(renderDailyQuest);
+  redrawFog();
+  updateHUD();
+  renderQuestList();
+  renderTreasureList();
+  renderPhotoSection();
+  buildPixelGrid();
+  buildPalette();
+  renderTemplateThumbnails();
+  refreshPixelGridView();
+  renderInventory();
+  buildPinPad();
+  updateQuestIndicator();
+  initGeolocation();
+})();
+</script>
+</body>
+</html>

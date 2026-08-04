@@ -103,15 +103,18 @@
   /* ---------- Quest-Scroll ---------- */
   #quest-panel{
     position:absolute;left:0;right:0;bottom:0;z-index:550;
-    max-height:72%;transform:translateY(100%);transition:transform .35s ease;
+    height:50vh;max-height:82vh;min-height:200px;
+    transform:translateY(100%);transition:transform .35s ease;
     background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
-    padding:16px 18px calc(18px + env(safe-area-inset-bottom)) 18px;
+    padding:6px 18px calc(18px + env(safe-area-inset-bottom)) 18px;
     box-shadow:0 -6px 16px rgba(0,0,0,.4);
     display:flex;flex-direction:column;
     clip-path:polygon(0.0% 0%,2.27% 4%,4.55% 0%,6.82% 4%,9.09% 0%,11.36% 4%,13.64% 0%,15.91% 4%,18.18% 0%,20.45% 4%,22.73% 0%,25.0% 4%,27.27% 0%,29.55% 4%,31.82% 0%,34.09% 4%,36.36% 0%,38.64% 4%,40.91% 0%,43.18% 4%,45.45% 0%,47.73% 4%,50.0% 0%,52.27% 4%,54.55% 0%,56.82% 4%,59.09% 0%,61.36% 4%,63.64% 0%,65.91% 4%,68.18% 0%,70.45% 4%,72.73% 0%,75.0% 4%,77.27% 0%,79.55% 4%,81.82% 0%,84.09% 4%,86.36% 0%,88.64% 4%,90.91% 0%,93.18% 4%,95.45% 0%,97.73% 4%,100.0% 0%,100% 100%,0 100%);
   }
   #quest-panel.open{transform:translateY(0);}
-  #quest-panel .panel-header{display:flex;align-items:center;justify-content:space-between;margin-top:8px;margin-bottom:10px;flex-shrink:0;}
+  .sheet-handle{display:flex;justify-content:center;padding:6px 0 4px 0;flex-shrink:0;touch-action:none;cursor:grab;}
+  .sheet-handle-bar{width:44px;height:5px;border-radius:3px;background:rgba(58,46,31,.4);}
+  #quest-panel .panel-header{display:flex;align-items:center;justify-content:space-between;margin-top:0;margin-bottom:10px;flex-shrink:0;}
   #quest-panel h2{margin:0;font-family:'Baloo 2',sans-serif;color:var(--ink);font-size:19px;flex-shrink:0;}
   .panel-close-btn{border:none;background:rgba(58,46,31,.2);color:var(--ink);width:30px;height:30px;border-radius:50%;font-size:15px;font-weight:800;flex-shrink:0;}
   #quest-panel .sub{margin:0 0 10px 0;font-size:12.5px;color:var(--ink);opacity:.75;}
@@ -199,10 +202,11 @@
   /* ---------- Eltern-Bereich ---------- */
   #parent-btn{position:absolute;top:calc(10px + env(safe-area-inset-top));right:10px;z-index:520;width:40px;height:40px;border-radius:50%;background:rgba(58,46,31,.55);border:none;color:var(--cream);font-size:16px;}
   #parent-panel{
-    position:absolute;left:0;right:0;bottom:0;z-index:700;max-height:74%;
+    position:absolute;left:0;right:0;bottom:0;z-index:700;
+    height:52vh;max-height:84vh;min-height:220px;
     transform:translateY(100%);transition:transform .35s ease;
     background:linear-gradient(180deg,var(--parchment-dark) 0%,var(--parchment) 18%);
-    padding:16px 18px calc(18px + env(safe-area-inset-bottom)) 18px;box-shadow:0 -6px 16px rgba(0,0,0,.4);
+    padding:6px 18px calc(18px + env(safe-area-inset-bottom)) 18px;box-shadow:0 -6px 16px rgba(0,0,0,.4);
     display:flex;flex-direction:column;
   }
   #parent-panel.open{transform:translateY(0);}
@@ -261,6 +265,7 @@
 <button id="quest-btn" class="round-btn" title="Quests öffnen">📜</button>
 
 <div id="quest-panel">
+  <div class="sheet-handle" id="quest-panel-handle"><div class="sheet-handle-bar"></div></div>
   <div class="panel-header">
     <h2>Entdecker-Logbuch</h2>
     <button class="panel-close-btn" id="quest-panel-close-btn" title="Schließen">✕</button>
@@ -324,6 +329,7 @@
 </div>
 
 <div id="parent-panel">
+  <div class="sheet-handle" id="parent-panel-handle"><div class="sheet-handle-bar"></div></div>
   <div id="parent-pin-view">
     <div class="panel-header">
       <h2>🔒 Eltern-Bereich</h2>
@@ -921,6 +927,36 @@
   var questList = document.getElementById('quest-list');
   document.getElementById('quest-btn').addEventListener('click', function(){ questPanel.classList.toggle('open'); });
   document.getElementById('quest-panel-close-btn').addEventListener('click', function(){ questPanel.classList.remove('open'); });
+
+  // ---------- Ziehbarer Anfasser für Bottom-Sheets ----------
+  // Zieht man den Anfasser bis nahe an die Mindesthöhe, schließt sich das jeweilige Sheet.
+  function makeSheetDraggable(panelEl, handleEl, minVh, maxVh, closeFn){
+    var dragging = false, startY = 0, startHeightPx = 0;
+    function vh(v){ return window.innerHeight * v / 100; }
+    handleEl.addEventListener('pointerdown', function(e){
+      dragging = true;
+      startY = e.clientY;
+      startHeightPx = panelEl.getBoundingClientRect().height;
+      try{ handleEl.setPointerCapture(e.pointerId); }catch(err){}
+      e.preventDefault();
+    });
+    handleEl.addEventListener('pointermove', function(e){
+      if(!dragging) return;
+      var deltaY = startY - e.clientY; // nach oben ziehen = größer
+      var newHeight = Math.max(vh(minVh), Math.min(vh(maxVh), startHeightPx + deltaY));
+      panelEl.style.height = newHeight + 'px';
+    });
+    function endDrag(){
+      if(!dragging) return;
+      dragging = false;
+      var currentHeight = panelEl.getBoundingClientRect().height;
+      if(closeFn && currentHeight <= vh(minVh) + vh(3)) closeFn();
+    }
+    handleEl.addEventListener('pointerup', endDrag);
+    handleEl.addEventListener('pointercancel', endDrag);
+  }
+  makeSheetDraggable(questPanel, document.getElementById('quest-panel-handle'), 26, 82, function(){ questPanel.classList.remove('open'); });
+  makeSheetDraggable(document.getElementById('parent-panel'), document.getElementById('parent-panel-handle'), 28, 84, function(){ closeParentPanel(); });
 
   function renderQuestList(){
     questList.innerHTML = '';
@@ -2085,7 +2121,7 @@
   }
   function openParentUnlocked(){
     document.getElementById('parent-pin-view').style.display = 'none';
-    document.getElementById('parent-unlocked-view').style.display = 'block';
+    document.getElementById('parent-unlocked-view').style.display = 'flex';
     parentPlacementMode = 'item';
     buildItemPicker();
     renderPlacedItemsList();
@@ -2117,7 +2153,7 @@
     pinMode = state.parentPin ? 'verify' : 'setup';
     document.getElementById('pin-instruction').textContent = state.parentPin ? 'PIN eingeben' : 'Neue PIN festlegen';
     updatePinDots();
-    document.getElementById('parent-pin-view').style.display = 'block';
+    document.getElementById('parent-pin-view').style.display = 'flex';
     document.getElementById('parent-unlocked-view').style.display = 'none';
     parentPanel.classList.add('open');
   });
@@ -2131,7 +2167,7 @@
     document.getElementById('pin-instruction').textContent = 'Neue PIN festlegen';
     updatePinDots();
     document.getElementById('parent-unlocked-view').style.display = 'none';
-    document.getElementById('parent-pin-view').style.display = 'block';
+    document.getElementById('parent-pin-view').style.display = 'flex';
   });
 
   // ---------- Schatz-Kompass (optional, von Eltern aktivierbar) ----------
